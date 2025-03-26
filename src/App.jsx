@@ -1,35 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components";
+import "./App.css";
+import PageHeader from "./components/layout/PageHeader";
 
-function App() {
-  const [count, setCount] = useState(0)
+const PageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-grey);
+`;
 
+const Paper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Main = styled.div`
+  width: 85%;
+  height: 85%;
+  background-color: var(--beige);
+  background-image: url("/src/assets/images/paper.png");
+  background-size: contain;
+  border-radius: 2px 2px 20px 10px;
+  z-index: 2;
+`;
+
+const Container = styled.div`
+  padding: 3em;
+`;
+
+const Sub = styled.div`
+  width: 84.5%;
+  height: 85%;
+  position: absolute;
+  background-color: var(--middle-dark-cream);
+  transform: skewX(1deg) translate(7px, -8px) rotate(-0.8deg);
+  border-radius: 2px;
+  z-index: 1;
+`;
+const Sub2 = styled.div`
+  width: 86%;
+  height: 86%;
+  position: absolute;
+  background-color: var(--dark-cream);
+  transform: translate(12px, -17px) rotate(-1deg);
+  border-radius: 2px;
+  z-index: 0;
+`;
+
+const PageContent = styled.div``;
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <PageWrapper>
+      <Paper>
+        <Main>
+          <Container>
+            <PageHeader />
+          </Container>
+        </Main>
+        <Sub></Sub>
+        <Sub2></Sub2>
+      </Paper>
+    </PageWrapper>
+  );
+};
 
-export default App
+export default App;

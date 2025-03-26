@@ -1,8 +1,82 @@
+@font-face {
+  font-family: "bogue";
+  src: url("./assets/fonts/BogueSlab-Medium.woff") format("woff"),
+    url("./assets/fonts/BogueSlab-Medium.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "sequel-sans";
+  src: url("./assets/fonts/SequelSans-Medium.woff") format("woff"),
+    url("./assets/fonts/SequelSans-Medium.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "sequel-sans-bold";
+  src: url("./assets/fonts/SequelSans-Black.woff") format("woff"),
+    url("./assets/fonts/SequelSans-Black.woff2") format("woff2");
+  font-weight: bold;
+}
+
+:root {
+  --main-color: #111;
+  --bg-color: #e2e8f0;
+  --line-color: rgb(140 140 140/0.4);
+  --line-color-2: rgba(211, 211, 211, 0.4);
+  --light-grey: #a2a2a2;
+  --light-grey-2: #d3d3d3;
+  --middle-grey: #283240;
+  --middle-dark-grey: #414141;
+  --dark-grey: #252525;
+
+  --beige: #f7f2e4;
+  --cream: #c8c2ba;
+  --middle-cream: #c4beb2;
+  --middle-dark-cream: #b9b1a6;
+  --dark-cream: #968a7a;
+  --yellow: #ffa200;
+  --text-header: "bogue";
+  --text-normal: "sequel-sans";
+  --text-bold: "sequel-sans-bold";
+  --box-shadow: 0 2px 18px 0px var(--line-color);
+
+  --palette-red: #e06187;
+  --palette-red-2: #b34447;
+  --palette-orange: #e5986a;
+  --palette-yellow: #f4d86f;
+  --palette-green: #b9dc7c;
+  --palette-cyan: #9cdce8;
+  --palette-blue: #7594b6;
+  --palette-purple: #a69cef;
+  --palette-pink: #cc99b3;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: var(--text-normal);
+  color: var(--main-color);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  place-items: flex-start !important;
+  background-color: var(--main-color);
+  position: relative;
+  div {
+    box-sizing: border-box;
+  }
+}
+
+a,
+p {
+  color: var(--main-color);
+  font-size: 14px;
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .logo {
@@ -39,4 +113,11 @@
 
 .read-the-docs {
   color: #888;
+}
+
+@media (max-width: 1440px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
