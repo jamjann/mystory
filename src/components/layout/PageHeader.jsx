@@ -36,7 +36,7 @@ const Title = styled.div`
   justify-content: space-between;
   grid-template-columns: auto 4fr auto;
   gap: 1em;
-  margin: 1.5em 0 1.5em;
+  margin: 1em 0 1.5em;
   text-align: center;
 `;
 
@@ -83,9 +83,10 @@ const Description = styled.div`
   gap: 1em;
   font-family: var(--text-header);
   text-transform: uppercase;
+  letter-spacing: 1px;
   p,
   a {
-    font-size: 0.8em;
+    font-size: 0.65em;
   }
 `;
 
@@ -116,7 +117,7 @@ const Location = styled.div`
 
 const PageHeader = () => {
   const date = new Date();
-  const jobs = ["software developer", "ux designer", "online business owner"];
+  const jobs = ["software engineer", "full-stack developer"];
 
   return (
     <Wrapper>

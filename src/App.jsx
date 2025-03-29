@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import "./App.css";
 import PageHeader from "./components/layout/PageHeader";
+import Paper from "./components/features/Paper";
+import { Highlight } from "./components/utils/TextStyles";
+import Intro from "./components/features/Intro";
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -8,60 +11,42 @@ const PageWrapper = styled.div`
   background-color: var(--dark-grey);
 `;
 
-const Paper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Main = styled.div`
-  width: 85%;
-  height: 85%;
-  background-color: var(--beige);
-  background-image: url("/src/assets/images/paper.png");
-  background-size: contain;
-  border-radius: 2px 2px 20px 10px;
-  z-index: 2;
-`;
-
 const Container = styled.div`
   padding: 3em;
+  overflow: hidden;
+  height: 100%;
+`;
+const Area = styled.div`
+  display: grid;
+  gap: 2em;
+  overflow: scroll;
+  height: 100%;
 `;
 
-const Sub = styled.div`
-  width: 84.5%;
-  height: 85%;
-  position: absolute;
-  background-color: var(--middle-dark-cream);
-  transform: skewX(1deg) translate(7px, -8px) rotate(-0.8deg);
-  border-radius: 2px;
-  z-index: 1;
-`;
-const Sub2 = styled.div`
-  width: 86%;
-  height: 86%;
-  position: absolute;
-  background-color: var(--dark-cream);
-  transform: translate(12px, -17px) rotate(-1deg);
-  border-radius: 2px;
-  z-index: 0;
-`;
+const PageContent = styled.div`
+  display: grid;
+  gap: 2em;
 
-const PageContent = styled.div``;
+  .star {
+    color: red;
+  }
+`;
 
 const App = () => {
   return (
     <PageWrapper>
       <Paper>
-        <Main>
-          <Container>
+        <Container>
+          <Area>
             <PageHeader />
-          </Container>
-        </Main>
-        <Sub></Sub>
-        <Sub2></Sub2>
+            <PageContent>
+              <Highlight>
+                <h3> - Girl who loves eating while coding -</h3>
+              </Highlight>
+              <Intro></Intro>
+            </PageContent>
+          </Area>
+        </Container>
       </Paper>
     </PageWrapper>
   );

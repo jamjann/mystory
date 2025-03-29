@@ -1,0 +1,35 @@
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  padding: 2em;
+  border: 1px solid var(--main-color);
+  text-align: justify;
+  p {
+    margin: 0;
+  }
+`;
+
+const SmallWrapper = styled.div`
+  padding: 1em;
+  border: 1px solid var(--main-color);
+  text-align: justify;
+  p {
+    font-size: 0.75em;
+    color: var(--middle-grey);
+    margin: 0;
+  }
+  .bold {
+    font-size: 1.2em;
+    font-family: var(--text-bold);
+  }
+`;
+
+const Box = ({ className, children }) => {
+  return <Wrapper className={className}>{children}</Wrapper>;
+};
+
+const SmallBox = ({ className, children }) => {
+  return <SmallWrapper className={className}>{children}</SmallWrapper>;
+};
+
+export { Box, SmallBox };

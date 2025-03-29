@@ -6,10 +6,17 @@
 }
 
 @font-face {
+  font-family: "bogue-bold";
+  src: url("./assets/fonts/BogueSlab-Bold.woff") format("woff"),
+    url("./assets/fonts/BogueSlab-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "sequel-sans";
   src: url("./assets/fonts/SequelSans-Medium.woff") format("woff"),
     url("./assets/fonts/SequelSans-Medium.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: normal;
 }
 
 @font-face {
@@ -31,12 +38,14 @@
   --dark-grey: #252525;
 
   --beige: #f7f2e4;
+  --dark-beige: #706a63;
   --cream: #c8c2ba;
   --middle-cream: #c4beb2;
   --middle-dark-cream: #b9b1a6;
   --dark-cream: #968a7a;
   --yellow: #ffa200;
   --text-header: "bogue";
+  --text-header-bold: "bogue-bold";
   --text-normal: "sequel-sans";
   --text-bold: "sequel-sans-bold";
   --box-shadow: 0 2px 18px 0px var(--line-color);
@@ -57,7 +66,7 @@ body {
   width: 100%;
   font-family: var(--text-normal);
   color: var(--main-color);
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,7 +81,7 @@ body {
 a,
 p {
   color: var(--main-color);
-  font-size: 14px;
+  font-size: 16px;
 }
 #root {
   width: 100vw;
@@ -115,9 +124,11 @@ p {
   color: #888;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1800px) {
   html,
-  body {
-    font-size: 16px;
+  body,
+  a,
+  p {
+    font-size: 13px;
   }
 }
