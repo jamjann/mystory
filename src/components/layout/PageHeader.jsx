@@ -36,7 +36,7 @@ const Title = styled.div`
   justify-content: space-between;
   grid-template-columns: auto 4fr auto;
   gap: 1em;
-  margin: 1em 0 1.5em;
+  margin: 0.5em 0 1.5em;
   text-align: center;
 `;
 
@@ -99,6 +99,7 @@ const Jobs = styled.div`
 
   h2 {
     text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
   & div {
     display: flex;
@@ -129,7 +130,9 @@ const PageHeader = () => {
 
       <Title>
         <LeftBlock>
-          <span>"It's all about me and my wonderful life" </span>
+          <span>
+            <b>"It's all about me and my wonderful life"</b>
+          </span>
         </LeftBlock>
         <Center>
           <h1> Phatthawipha J.</h1>
@@ -138,7 +141,9 @@ const PageHeader = () => {
             {jobs.map((job, idx) => {
               return (
                 <div key={idx}>
-                  <h2>{job}</h2>
+                  <h2>
+                    <b>{job}</b>
+                  </h2>
                   {idx < jobs.length - 1 && <Dot />}
                 </div>
               );
@@ -147,7 +152,9 @@ const PageHeader = () => {
         </Center>
         <RightBlock>
           <h4>latest edition</h4>
-          <span>Currently: Enjoying reading a book "Four Thousand Weeks"</span>
+          <span>
+            <b>Currently: Enjoying reading a book "Four Thousand Weeks"</b>
+          </span>
         </RightBlock>
       </Title>
 

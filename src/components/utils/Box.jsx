@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 2em;
+  padding: 1.5em 2em;
   border: 1px solid var(--main-color);
   text-align: justify;
   p {

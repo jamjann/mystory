@@ -3,6 +3,7 @@ import { Box, SmallBox } from "../utils/Box";
 import Image from "../utils/Image";
 import FocusArea from "../utils/FocusArea";
 import { Highlight, Paragraph, SubHighlight, Topic } from "../utils/TextStyles";
+import FocusText from "../utils/FocusText";
 
 const Wrapper = styled.div`
   display: grid;
@@ -108,8 +109,11 @@ const Intro = () => {
       <ContentArea className="etc">
         <SmallBox>
           <p>
-            <span className="star">* </span>I know it is quite hard to pronouce
-            my name, so you can also call me
+            <span className="star">* </span>
+            <b>
+              I know it is quite hard to pronouce my name, so you can also call
+              me
+            </b>
             <span className="bold"> " JAN "</span>
           </p>
         </SmallBox>
@@ -158,20 +162,27 @@ const Intro = () => {
 
         <Box>
           <p>
-            I'm a software engineer based in Vancouver, Canada. Currently, I'm a
-            freelance full-stack developer with over 10 years of diverse
-            commercial experience and a demonstrated history of working in the
-            startup and design industry.
+            <b>
+              I'm <FocusText color="green">a software engineer</FocusText> based
+              in Vancouver, Canada. Currently, I'm a freelance{" "}
+              <FocusText color="green">full-stack developer</FocusText> with
+              over 10 years of diverse commercial experience and a demonstrated
+              history of working in the{" "}
+              <FocusText color="orange">startup</FocusText> and{" "}
+              <FocusText color="orange">design industry</FocusText>.
+            </b>
           </p>
         </Box>
 
         <Paragraph>
           <p>
             Throughout my career, I've worked with businesses of all scales to
-            initiate and contribute to successful projects, including
-            consulting, designing, and developing websites, mobile applications,
-            and internal systems that meet my customers' requirements and the
-            end users' needs.
+            initiate and contribute to successful projects, including{" "}
+            <FocusText color="pink">
+              consulting, designing, and developing
+            </FocusText>{" "}
+            websites, mobile applications, and internal systems that meet my
+            customers' requirements and the end users' needs.
           </p>
           <p>
             I'm passionate about using my knowledge to create something new for
@@ -195,8 +206,8 @@ const Intro = () => {
           </Highlight>
           <Paragraph>
             <p>
-              I'm interested in boosting my new skill set and doing something
-              fun.
+              I'm interested in boosting my new skill set and doing some fun
+              stuff.
             </p>
             <p>
               Recently, I've been enjoyed and obsessed with hiking, being a
