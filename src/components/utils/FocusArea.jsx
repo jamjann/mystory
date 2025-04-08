@@ -24,7 +24,9 @@ const Wrapper = styled.div`
   }
 
   &:hover {
-    .text {
+    .text,
+    a {
+      transition: all 1s;
       color: white;
     }
     .focus {

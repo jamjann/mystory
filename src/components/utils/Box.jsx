@@ -12,15 +12,25 @@ const Wrapper = styled.div`
 const SmallWrapper = styled.div`
   padding: 1em;
   border: 1px solid var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: justify;
-  p {
-    font-size: 0.75em;
-    color: var(--middle-grey);
+  gap: 1em;
+  & > * {
     margin: 0;
   }
   .bold {
-    font-size: 1.2em;
     font-family: var(--text-bold);
+  }
+
+  p {
+    font-size: 0.75em;
+    color: var(--middle-grey);
+  }
+
+  span.bold {
+    font-size: 1.2em;
   }
 `;
 

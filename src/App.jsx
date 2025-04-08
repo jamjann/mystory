@@ -4,6 +4,7 @@ import PageHeader from "./components/layout/PageHeader";
 import Paper from "./components/features/Paper";
 import { Highlight } from "./components/utils/TextStyles";
 import Intro from "./components/features/Intro";
+import Experience from "./components/features/Experience/";
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -16,6 +17,7 @@ const Container = styled.div`
   overflow: hidden;
   height: 100%;
 `;
+
 const Area = styled.div`
   display: grid;
   gap: 2em;
@@ -41,9 +43,11 @@ const App = () => {
             <PageHeader />
             <PageContent>
               <Highlight>
-                <h3> - Girl who loves eating while coding -</h3>
+                <h2> - Girl who loves eating while coding -</h2>
               </Highlight>
-              <Intro></Intro>
+
+              <Intro />
+              <Experience />
             </PageContent>
           </Area>
         </Container>

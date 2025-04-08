@@ -9,14 +9,12 @@ const color = {
 
 const Wrapper = styled.span`
   position: relative;
-  /* display: inline-block; */
-  /* color: white; */
 
   &::after {
     content: "";
     background-color: ${(props) =>
       props.color ? color[props.color] : color.blue};
-    transform: skewX(350deg);
+    transform: skewX(345deg);
 
     width: 106%;
     height: 100%;
