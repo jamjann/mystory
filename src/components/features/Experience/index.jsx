@@ -42,7 +42,11 @@ const Head = styled.div`
 const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 2em;
+  gap: 3em;
+
+  @media screen and (max-width: 1800px) {
+    display: block;
+  }
 `;
 
 const Experience = () => {

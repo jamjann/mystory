@@ -99,6 +99,10 @@ p {
   height: 100vh;
 }
 
+.star {
+  color: red;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

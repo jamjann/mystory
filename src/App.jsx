@@ -28,10 +28,6 @@ const Area = styled.div`
 const PageContent = styled.div`
   display: grid;
   gap: 2em;
-
-  .star {
-    color: red;
-  }
 `;
 
 const App = () => {

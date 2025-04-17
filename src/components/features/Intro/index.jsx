@@ -33,16 +33,6 @@ const Intro = () => {
   return (
     <Wrapper>
       <ContentArea className="etc">
-        <SmallBox>
-          <p>
-            <span className="star">* </span>
-            <b>
-              I know it is quite hard to pronouce my name, so you can also call
-              me
-            </b>
-            <span className="bold"> " JAN "</span>
-          </p>
-        </SmallBox>
         <SkillList />
       </ContentArea>
 
@@ -58,6 +48,16 @@ const Intro = () => {
         <Field title="email" color="pink">
           <a href="mailto:phatthawipha.j@gmail.com">phatthawipha.j@gmail.com</a>
         </Field>
+        <SmallBox>
+          <p>
+            <span className="star">* </span>
+            <b>
+              I know it is quite hard to pronouce my name, so you can also call
+              me
+            </b>
+            <span className="bold"> " JAN "</span>
+          </p>
+        </SmallBox>
         <Hobby />
       </ContentArea>
     </Wrapper>

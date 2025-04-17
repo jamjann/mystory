@@ -20,9 +20,9 @@ const Hobby = () => {
           I'm interested in boosting my new skill set and doing some fun stuff.
         </p>
         <p>
-          Recently, I've been enjoyed and obsessed with hiking, being a street
-          photographer, running an online business, oh, and also being a
-          part-time pet sitter caring for little cuties' fur babies as well.
+          Recently, I've been enjoyed and obsessed with hiking, volunteering,
+          being a street photographer, running an online business, oh, and also
+          being a part-time pet sitter caring for little fur babies as well.
         </p>
       </Paragraph>
     </Wrapper>

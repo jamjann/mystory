@@ -5,10 +5,19 @@ const Wrapper = styled.div`
   border: 1px solid var(--main-color);
   text-transform: uppercase;
   padding: 2em 0;
+
+  @media screen and (max-width: 1800px) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, auto);
+    text-align: center;
+    padding: 0;
+  }
 `;
 
 const Item = styled.div`
   cursor: pointer;
+  font-family: var(--text-medium);
   padding: 10px;
   transition: all 0.3s;
   border-top: 1px solid transparent;
