@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1800px) {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     text-align: center;
     padding: 0;
   }

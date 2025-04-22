@@ -43,6 +43,7 @@ const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 3em;
+  min-height: 35vh;
 
   @media screen and (max-width: 1800px) {
     display: block;

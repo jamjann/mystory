@@ -12,18 +12,22 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+`;
+
+const ContainerWrapper = styled.div`
   display: grid;
   gap: 4em;
   justify-content: space-between;
   align-items: flex-start;
-  width: 80%;
 
   &.col {
     width: 100%;
     grid-template-columns: 0.75fr 0.25fr;
   }
 `;
-
 const StyledTopic = styled(Topic)`
   display: flex;
   flex-flow: row wrap;
@@ -103,67 +107,108 @@ const InfoList = styled.div`
   gap: 1em;
 `;
 
+const TechStack = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 1.5em;
+  font-size: 0.85em;
+  margin-top: 3em;
+  p {
+    margin: 0;
+    b {
+      text-transform: uppercase;
+    }
+  }
+`;
+
+const SkillList = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 10px;
+  p {
+    padding: 5px 10px;
+    border: 1px dashed var(--main-color);
+  }
+`;
+
 const Detail = ({ id }) => {
   const { company, position } = experienceList[id];
 
   return (
     <Wrapper>
       {position?.map((p, idx) => {
-        const { title, subtitle, info, duration, description } = p;
+        const { title, subtitle, info, duration, description, skill } = p;
         return (
-          <Container className={info && "col"}>
-            <div key={idx}>
-              <StyledTopic>
-                <h2>
-                  <FocusText>{title}</FocusText>
-                </h2>
-                {subtitle ? (
-                  <Subtitle>
-                    <h3>
-                      in <span className="expand">{subtitle}</span> @ {company}
-                    </h3>
-                  </Subtitle>
-                ) : (
-                  <Subtitle> @ {company}</Subtitle>
-                )}
-              </StyledTopic>
-              <Duration>{duration}</Duration>
+          <Container>
+            <ContainerWrapper className={info && "col"}>
+              <div key={idx}>
+                <StyledTopic>
+                  <h2>
+                    <FocusText>{title}</FocusText>
+                  </h2>
+                  {subtitle ? (
+                    <Subtitle>
+                      <h3>
+                        in <span className="expand">{subtitle}</span> @{" "}
+                        {company}
+                      </h3>
+                    </Subtitle>
+                  ) : (
+                    <Subtitle> @ {company}</Subtitle>
+                  )}
+                </StyledTopic>
+                <Duration>{duration}</Duration>
 
-              <Description>
-                {description.map((point, idx) => {
-                  return (
-                    <Point key={idx}>
-                      <div>
-                        <p>{point.text}</p>
-                        {point.content && (
-                          <div className="content">
-                            {point.content.map((c) => {
-                              return <p>{c}</p>;
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    </Point>
-                  );
-                })}
-              </Description>
-            </div>
-            {info && (
-              <InfoList>
-                {info.map((i) => {
-                  return (
-                    <SmallBox>
-                      <Info>
+                <Description>
+                  {description.map((point, idx) => {
+                    return (
+                      <Point key={idx}>
                         <div>
-                          <span className="star">* </span>
-                          <p className="bold">{i.title}</p>
+                          <p>{point.text}</p>
+                          {point.content && (
+                            <div className="content">
+                              {point.content.map((c) => {
+                                return <p>{c}</p>;
+                              })}
+                            </div>
+                          )}
                         </div>
-                        <p className="text">{i.detail}</p>
-                      </Info>
-                    </SmallBox>
-                  );
-                })}
-              </InfoList>
+                      </Point>
+                    );
+                  })}
+                </Description>
+              </div>
+              {info && (
+                <InfoList>
+                  {info.map((i) => {
+                    return (
+                      <SmallBox>
+                        <Info>
+                          <div>
+                            <span className="star">* </span>
+                            <p className="bold">{i.title}</p>
+                          </div>
+                          <p className="text">{i.detail}</p>
+                        </Info>
+                      </SmallBox>
+                    );
+                  })}
+                </InfoList>
+              )}
+            </ContainerWrapper>
+            {skill && (
+              <TechStack>
+                <p>
+                  <b>tech stack</b>
+                </p>
+                <SkillList>
+                  {skill.map((s) => {
+                    return <p className="text">{s}</p>;
+                  })}
+                </SkillList>
+              </TechStack>
             )}
           </Container>
         );

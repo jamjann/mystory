@@ -1,11 +1,11 @@
 const skillList = {
-  language: ["JavaScript", "TypeScript", "Ruby", "C#", "PHP"],
+  language: ["JavaScript", "TypeScript", "CSS/ SCSS", "PHP"],
   "library & framework": [
     "React",
     "Vue.js",
     "Ruby on Rails",
     "Node.js",
-    "Express.js",
+    "Express",
   ],
   database: ["MySQL", "PostgreSQL", "MongoDB"],
 };
@@ -18,6 +18,19 @@ const experienceList = [
       {
         title: "Full-Stack Developer",
         duration: "JUN 2015 - Present",
+        skill: [
+          "CSS/ SCSS",
+          "PHP",
+          "JavaScript",
+          "Node.js",
+          "React",
+          "React Native",
+          "PostgreSQL",
+          "REST API",
+          "Wordpress",
+          "Concrete",
+          "Git",
+        ],
         description: [
           {
             text: "Consult, design and develop over 20 successful web and mobile applications for various types of businesses using design methods and technologies relevant to customers' requirements and project details",
@@ -42,6 +55,16 @@ const experienceList = [
       {
         title: "Software Developer",
         duration: "NOV 2018 - JUL 2022",
+        skill: [
+          "CSS/ SCSS",
+          "PHP",
+          "JavaScript",
+          "Vue.js",
+          "React Native",
+          "REST API",
+          "Wordpress",
+          "Git",
+        ],
         info: [
           {
             title: "Hobbiz",
@@ -70,6 +93,15 @@ const experienceList = [
       {
         title: "Software Engineer",
         duration: "JUN 2019 - DEC 2019",
+        skill: [
+          "TypeScript",
+          "React",
+          "Ruby",
+          "Gatsby",
+          "PostgreSQL",
+          "GraphQL",
+          "Git",
+        ],
         info: [
           {
             title: "SNEAK",
@@ -101,6 +133,15 @@ const experienceList = [
       {
         title: "Software Developer",
         duration: "SEP 2015 - MAY 2019",
+        skill: [
+          "CSS/ SCSS",
+          "PHP",
+          "JavaScript",
+          "React Native",
+          "Ruby on Rails",
+          "Concrete",
+          "Magento",
+        ],
         info: [
           {
             title: "KOS Design",
@@ -141,6 +182,7 @@ const experienceList = [
           },
         ],
         duration: "JUN 2014 - MAY 2015",
+        skill: ["Python", "MongoDB", "ROS"],
         description: [
           {
             text: "Participate as a core member of the sole robot development team from Thailand and one of the 14 finalist teams in the Robocup@Home competition, the world's largest robotics competition for autonomous service, held annually among students and robotics / AI experts worldwide",
@@ -170,6 +212,7 @@ const experienceList = [
           },
         ],
         duration: "JUN 2013 - MAY 2015",
+        skill: ["C#"],
         description: [
           {
             text: 'Lead five classes of the course "Computer & Programming" in theory and practice to more than 250 first-year engineering students',
@@ -201,6 +244,7 @@ const experienceList = [
           },
         ],
         duration: "APR 2014 - MAY 2014",
+        skill: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
         description: [
           {
             text: "Design and implement an internal service that about 1000 employees use to manage and store data and usage history of all electronic devices used within the company",
