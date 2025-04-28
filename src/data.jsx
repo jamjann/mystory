@@ -261,4 +261,40 @@ const experienceList = [
   },
 ];
 
-export { skillList, experienceList };
+const educationList = [
+  {
+    topic: "Kasetsart University",
+    fields: [
+      { title: "Degree", value: "Bachelor of Engineering with Distinction" },
+      { title: "Field of study", value: "Computer Engineering" },
+      { title: "Year", value: "2011 - 2015" },
+    ],
+  },
+];
+
+const certificationList = [
+  {
+    type: "certificate with distinction",
+    topic: "Introduction to Canadian Business Management",
+    fields: [{ title: "By", value: "VGC International College" }],
+  },
+  {
+    type: "certificate",
+    topic: "Foundations of User Experience (UX) Design",
+    link: "https://www.coursera.org/verify/EK4H9CRX2WK5",
+    fields: [{ title: "By", value: "Google on Coursera" }],
+  },
+  {
+    type: "certificate",
+    topic: "The Complete Ruby on Rails Developer Course",
+    link: "https://www.udemy.com/certificate/UC-f9ffb187-bb18-4d1a-bd76-bd1faa78b77c/",
+    fields: [{ title: "By", value: "Codestars on Udemy" }],
+  },
+  {
+    type: "certificate",
+    topic: "YC Startup School 2019",
+    fields: [{ title: "By", value: "Y Combinator" }],
+  },
+];
+
+export { skillList, experienceList, educationList, certificationList };

@@ -5,6 +5,7 @@ import Paper from "./components/features/Paper";
 import { Highlight } from "./components/utils/TextStyles";
 import Intro from "./components/features/Intro";
 import Experience from "./components/features/Experience/";
+import Project from "./components/features/Project";
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -21,13 +22,12 @@ const Container = styled.div`
 const Area = styled.div`
   display: grid;
   gap: 2em;
-  overflow: scroll;
   height: 100%;
 `;
 
 const PageContent = styled.div`
   display: grid;
-  gap: 2em;
+  gap: 3em;
 `;
 
 const App = () => {
@@ -43,7 +43,10 @@ const App = () => {
               </Highlight>
 
               <Intro />
+
               <Experience />
+
+              <Project />
             </PageContent>
           </Area>
         </Container>

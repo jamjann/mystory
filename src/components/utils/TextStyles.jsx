@@ -48,4 +48,11 @@ const Topic = styled.div`
   }
 `;
 
-export { Highlight, SubHighlight, Paragraph, Topic };
+const MiniTopic = styled.p`
+  font-family: var(--text-bold);
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 0.85em;
+`;
+
+export { Highlight, SubHighlight, Paragraph, Topic, MiniTopic };
