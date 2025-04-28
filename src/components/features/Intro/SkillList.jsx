@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { skillList } from "../../../data";
-import { Highlight, SubHighlight } from "../../utils/TextStyles";
+import { Highlight, MiniTopic, SubHighlight } from "../../utils/TextStyles";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   gap: 1.5em;
 `;
 
+const Head = styled.div``;
 const List = styled.div`
   display: grid;
   gap: 1.5em;
@@ -21,19 +22,10 @@ const Type = styled.div`
   align-items: baseline;
   grid-template-columns: auto 1fr;
   gap: 10px;
-  p {
-    font-family: var(--text-bold);
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 0.85em;
-  }
-  span {
-    width: 100%;
-    border-bottom: 2px dotted var(--middle-grey);
-  }
 `;
 
-const Item = styled.div`
+const Skills = styled.div``;
+const Skill = styled.div`
   width: 100%;
   display: grid;
   align-items: baseline;
@@ -43,39 +35,43 @@ const Item = styled.div`
     font-size: 0.85em;
     margin: 0;
   }
-  span {
-    width: 100%;
-    border-bottom: 2px dotted var(--middle-grey);
-  }
+`;
+
+const Dotted = styled.span`
+  width: 100%;
+  border-bottom: 2px dotted var(--middle-grey);
 `;
 
 const SkillList = () => {
   return (
     <Wrapper>
-      <div>
+      <Head>
         <Highlight>
           <h4>some technologies</h4>
         </Highlight>
         <SubHighlight>
           <p>I've been working with</p>
         </SubHighlight>
-      </div>
+      </Head>
+
       <List>
         {Object.keys(skillList).map((type, id) => {
           return (
             <div key={id}>
               <Type>
-                <p>{type}</p>
-                <span></span>
+                <MiniTopic>{type}</MiniTopic>
+                <Dotted />
               </Type>
-              {skillList[type].map((skill, idx) => {
-                return (
-                  <Item key={idx}>
-                    <span></span>
-                    <p>{skill}</p>
-                  </Item>
-                );
-              })}
+              <Skills>
+                {skillList[type].map((skill, idx) => {
+                  return (
+                    <Skill key={idx}>
+                      <Dotted />
+                      <p>{skill}</p>
+                    </Skill>
+                  );
+                })}
+              </Skills>
             </div>
           );
         })}

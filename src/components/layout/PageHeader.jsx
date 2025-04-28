@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import FormattedDate from "../utils/Date";
+import TextWithLine from "../utils/TextWithLine";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -17,17 +18,6 @@ const Dot = styled.div`
   border-radius: 50%;
   background-color: var(--main-color);
   margin: 0 3px;
-`;
-
-const Subtitle = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: space-between;
-  grid-template-columns: 0.5fr auto 0.5fr;
-  gap: 1.5em;
-  p {
-    margin: 0;
-  }
 `;
 
 const Title = styled.div`
@@ -122,11 +112,7 @@ const PageHeader = () => {
 
   return (
     <Wrapper>
-      <Subtitle>
-        <Line />
-        <span>Hi guys! welcome you to explore</span>
-        <Line />
-      </Subtitle>
+      <TextWithLine text="Hi guys! welcome you to explore" />
 
       <Title>
         <LeftBlock>

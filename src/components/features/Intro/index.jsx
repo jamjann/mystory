@@ -46,7 +46,7 @@ const Intro = () => {
 
       <ContentArea>
         <Field title="email" color="pink">
-          <a href="mailto:phatthawipha.j@gmail.com">phatthawipha.j@gmail.com</a>
+          <a href="mailto:im@jamjann.dev">im@jamjann.dev</a>
         </Field>
         <SmallBox>
           <p>

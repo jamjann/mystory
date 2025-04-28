@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { experienceList } from "../../../data";
-import { Topic } from "../../utils/TextStyles";
+import { MiniTopic, Topic } from "../../utils/TextStyles";
 import FocusText from "../../utils/FocusText";
 import { SmallBox } from "../../utils/Box";
 
@@ -112,12 +112,15 @@ const TechStack = styled.div`
   grid-template-columns: auto 1fr;
   align-items: baseline;
   gap: 1.5em;
-  font-size: 0.85em;
   margin-top: 3em;
+
   p {
     margin: 0;
     b {
+      font-family: var(--text-bold);
       text-transform: uppercase;
+      margin: 0;
+      font-size: 0.85em;
     }
   }
 `;
@@ -125,9 +128,10 @@ const TechStack = styled.div`
 const SkillList = styled.div`
   display: flex;
   flex-flow: row wrap;
-
   gap: 10px;
+
   p {
+    font-size: 0.85em;
     padding: 5px 10px;
     border: 1px dashed var(--main-color);
   }
@@ -141,7 +145,7 @@ const Detail = ({ id }) => {
       {position?.map((p, idx) => {
         const { title, subtitle, info, duration, description, skill } = p;
         return (
-          <Container>
+          <Container key={idx}>
             <ContainerWrapper className={info && "col"}>
               <div key={idx}>
                 <StyledTopic>
@@ -169,8 +173,8 @@ const Detail = ({ id }) => {
                           <p>{point.text}</p>
                           {point.content && (
                             <div className="content">
-                              {point.content.map((c) => {
-                                return <p>{c}</p>;
+                              {point.content.map((c, idx) => {
+                                return <p key={idx}>{c}</p>;
                               })}
                             </div>
                           )}
@@ -200,12 +204,14 @@ const Detail = ({ id }) => {
             </ContainerWrapper>
             {skill && (
               <TechStack>
-                <p>
-                  <b>tech stack</b>
-                </p>
+                <MiniTopic>tech stack</MiniTopic>
                 <SkillList>
-                  {skill.map((s) => {
-                    return <p className="text">{s}</p>;
+                  {skill.map((s, idx) => {
+                    return (
+                      <p key={idx} className="text">
+                        {s}
+                      </p>
+                    );
                   })}
                 </SkillList>
               </TechStack>
