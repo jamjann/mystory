@@ -22,7 +22,7 @@ const Image = ({ className, url, caption }) => {
           backgroundImage: `url(${url})`,
         }}
       ></Photo>
-      <span className="caption">{caption}</span>
+      {caption && <span className="caption">{caption}</span>}
     </Wrapper>
   );
 };

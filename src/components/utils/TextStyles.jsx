@@ -55,4 +55,21 @@ const MiniTopic = styled.p`
   font-size: 0.85em;
 `;
 
-export { Highlight, SubHighlight, Paragraph, Topic, MiniTopic };
+const Head = styled.div`
+  padding: 4px 0;
+  text-align: center;
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+
+  > * {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: var(--text-header);
+    letter-spacing: 3px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding: 0.5em;
+  }
+`;
+
+export { Highlight, SubHighlight, Paragraph, Topic, MiniTopic, Head };

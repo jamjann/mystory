@@ -4,6 +4,7 @@ import { useState } from "react";
 import List from "./List";
 import Detail from "./Detail";
 import { experienceList } from "../../../data";
+import { Head } from "../../utils/TextStyles";
 
 const Wrapper = styled.div`
   display: grid;
@@ -20,23 +21,6 @@ const ImageArea = styled(Image)`
   width: 100%;
   height: 100%;
   transition: all 0.3s;
-`;
-
-const Head = styled.div`
-  padding: 5px 0;
-  text-align: center;
-  border-top: 3px solid var(--main-color);
-  border-bottom: 3px solid var(--main-color);
-
-  h3 {
-    margin: 0;
-    text-transform: uppercase;
-    font-family: var(--text-header);
-    letter-spacing: 3px;
-    border-top: 1px solid var(--main-color);
-    border-bottom: 1px solid var(--main-color);
-    padding: 0.5em;
-  }
 `;
 
 const Content = styled.div`

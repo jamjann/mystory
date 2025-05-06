@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Highlight } from "../../utils/TextStyles";
+import { Head } from "../../utils/TextStyles";
 import Book from "./Book";
 import Card from "./Card";
 import Poster from "./Poster";
 import { certificationList, educationList } from "../../../data";
+import List from "./List";
 
 const Wrapper = styled.div`
   display: grid;
@@ -11,18 +12,18 @@ const Wrapper = styled.div`
   gap: 2em;
 `;
 
-const List = styled.div`
-  border: 1px solid var(--main-color);
+const Content = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
 `;
 
-const Main = styled.div`
-  padding: 1em;
-`;
-const Block = styled.div``;
+const Main = styled.div``;
 
 const LeftCol = styled.div`
-  display: grid;
+  display: flex;
   gap: 2em;
+  flex-flow: column wrap;
 `;
 
 const RightCol = styled.div``;
@@ -47,19 +48,14 @@ const Project = () => {
         />
       </LeftCol>
 
-      <List>
-        <Highlight>
+      <Content>
+        <Head>
           <h3>Pet projects</h3>
-        </Highlight>
+        </Head>
         <Main>
-          <Block>
-            <div>
-              <h3>Lorem</h3>
-              <p></p>
-            </div>
-          </Block>
+          <List />
         </Main>
-      </List>
+      </Content>
 
       <RightCol>
         <Certification>

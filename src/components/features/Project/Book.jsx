@@ -97,6 +97,7 @@ const Hover = styled.div`
 
   .icon {
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     background-color: rgb(247 242 228 / 90%);
