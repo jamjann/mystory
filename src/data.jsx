@@ -33,16 +33,19 @@ const experienceList = [
         ],
         description: [
           {
-            text: "Consult, design and develop over 20 successful web and mobile applications for various types of businesses using design methods and technologies relevant to customers' requirements and project details",
+            text: "Build successful projects for clients in various industries, including e-commerce, travel, and education, contributing to over 20 firms to enhance their online presence and reach their target audience effectively",
           },
           {
-            text: "Enhance the performance of the website by creating a web content application with tailored features focusing on SEO, leading to an increase of over 1200% in organic traffic on the website after a few months of launching",
+            text: "Enhance the performance of the website by creating a web content application focusing on SEO, leading to an increase of over 1200% in organic traffic on the website after a few months of launching",
           },
           {
-            text: "Solve the pain points of the existing system that customers are facing while providing practical and feasible solutions to ensure the highest efficiency of products for end users, resulting in more than 4000 non-tech savvy users accessing information and using the system more easily and conveniently",
+            text: "Solve the pain points of the existing system that customers are facing while providing practical solutions to ensure the highest efficiency of products for end users, resulting in more than 4000 non-tech savvy users accessing and using the service more easily conveniently",
           },
           {
-            text: "Experience working with various programming languages, frameworks, CMS, and technologies, including implementing custom components and integrating websites with open-source technologies, third-party applications and extensions",
+            text: "Experience working with various programming languages, frameworks, CMS, and technologies using design methods and technologies relevant to customers' requirements and project details",
+          },
+          {
+            text: "Implement custom components and integrating web and mobile applications with open-source technologies, third-party applications and APIs, such as payment gateways, social media platforms, and analytics tools",
           },
         ],
       },
@@ -74,13 +77,16 @@ const experienceList = [
         ],
         description: [
           {
-            text: "Collaborate with marketing and design teams to discuss technical feasibility and suitability of the design for revisions and improvements before finalizing the final design for actual development, leading to a 40% decrease in development time to meet tight project deadlines",
+            text: "Plan the development and define the project scope of each phase according to customer conditions, leading to a 40% decrease in development time to meet tight project deadlines",
           },
           {
-            text: "Lead technical meetings with high-profile brands to pitch ideas and answer their development concerns, playing a key role in significantly helping the marketing team close deals with those customers",
+            text: "Lead and organize technical meetings with renowned brands to pitch ideas and answer their development concerns, playing a key role in significantly supporting the marketing team in closing valuable deals with customers",
           },
           {
             text: "Develop positive relationships with clients and partners through continuous support and delivery of quality outcomes, resulting in the team having over 95% repeat clients who decide to do multiple projects with the company",
+          },
+          {
+            text: "Collaborate with operation teams to discuss the feasibility of the plan before actual development, including supporting the team in problem-solving and decision-making on the best technology stack to use for each project",
           },
         ],
       },
@@ -111,16 +117,16 @@ const experienceList = [
         ],
         description: [
           {
-            text: "Develop a platform as a web application with a mobile-first strategy to create a user-friendly product suitable for the leading target group, resulting in over 10,000 itineraries created after launch and a 10x increase in users within 4 months",
+            text: "Develop a platform as a web application with a mobile-first strategy to create a user-friendly product suitable for the leading target group, resulting in a 10x increase in users within 4 months and over 10,000 itineraries created after launching",
           },
           {
-            text: "Participate in all processes related to system development from UX testing to software implementation, including experience in product research and design based on user-centred design and A/B testing, resulting in an award-winning product at 2019 Thailand's MICE Startup and being selected as one of the top 15 finalists in the Dtac Accelerate Batch 7",
+            text: "Experience in product research and design based on user-centred design and A/B testing, resulting in being an award-winning product in 2019 Thailand's MICE Startup program and being selected as one of the top 15 finalists in the Dtac Accelerate Batch 7",
           },
           {
-            text: "Lead the project in setting up and implementing a SNAEK web application on both the user-side and admin dashboard, focusing on SEO and page loading speed",
+            text: "Participate in all processes related to system development from UX testing to software implementation, including conducting user interviews and surveys to gather feedback and insights for product improvement",
           },
           {
-            text: "Collaborate with the team to create an outcome that simultaneously meets the product's objectives, the VC's conditions, and the end users' needs within resource and time constraints",
+            text: "Cooperate with the team to ensure the technical solutions align with the business goals, the product's objectives, the VC's conditions, and the end users' needs within resource and time constraints",
           },
         ],
       },
@@ -151,13 +157,16 @@ const experienceList = [
         ],
         description: [
           {
-            text: "Propose, initiate, and implement the development of mobile applications as a new service for the company, including mentoring and guiding people in the entire engineering team in co-developing those applications, leading to increased new business opportunities and generating more than 20% additional revenue for the company",
+            text: "Propose, initiate, and implement the development of mobile applications as a new service for the company, leading to new business opportunities that generated over 30% more revenue for the firm",
           },
           {
-            text: "Develop responsive web applications, including e-commerce websites, from scratch to the production with unique designs and tailored features for medium and large companies in Thailand and abroad i.e. Akyra, Bitdefender, Canterbury, Conergy, DM Home, Naraya, Takenaka, and Tris Rating",
+            text: "Mentor, guide, and share technical knowledge with the engineering team and interns to help them grow and develop their skills, including conducting training sessions and workshops to enhance the team's efficiency and productivity",
           },
           {
-            text: "Consult and offer technically applicable solutions closely with designers and customers throughout the project to ensure the results meet the requirements and everyone is on the same page",
+            text: "Develop quality responsive web applications from scratch for medium and large companies worldwide, i.e. Bitdefender, Canterbury, Conergy, Naraya, Takenaka, etc., with a satisfaction rate of over 98% from customers and end users who also recommend the company to others",
+          },
+          {
+            text: "Gather requirements, design the system architecture, and implement the solution to ensure the final product meets the client's needs and expectations",
           },
         ],
       },
@@ -168,7 +177,7 @@ const experienceList = [
     image: "/src/assets/images/jamjann-02.jpg",
     position: [
       {
-        title: "Software Engineer",
+        title: "Research Engineer",
         info: [
           {
             title: "SKUBA",
@@ -188,7 +197,7 @@ const experienceList = [
             text: "Participate as a core member of the sole robot development team from Thailand and one of the 14 finalist teams in the Robocup@Home competition, the world's largest robotics competition for autonomous service, held annually among students and robotics / AI experts worldwide",
           },
           {
-            text: "Implement new object recognition algorithm and voice recognition system by using ROS (Robot Operating System), pocketsphinx, Flite, SURF (Speeded-Up Robust Features), and KNN (k-Nearest Neighbors) algorithm",
+            text: "Implement new object recognition algorithm and voice recognition system by using ROS, pocketsphinx, Flite, SURF, and KNN algorithm to improve the robot's ability to recognize objects and understand human commands",
           },
           {
             text: "Design a data model and build a document database, using MongoDB, to store object data obtained from the robot's visual and audio recognition system",
@@ -218,7 +227,7 @@ const experienceList = [
             text: 'Lead five classes of the course "Computer & Programming" in theory and practice to more than 250 first-year engineering students',
           },
           {
-            text: "Provide one-on-one sessions to advise and assist students who need additional support during and outside class time",
+            text: "Provide one-on-one sessions to advise and assist students who need additional support during and outside class time ",
           },
           {
             text: "Design C# problems, lessons, and exams for students to practice and assess learning, including assignments, weekly assessments, midterm and final exams",

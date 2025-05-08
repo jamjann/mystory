@@ -9,6 +9,10 @@ const Wrapper = styled.div`
   padding: 2em 0;
   flex-flow: column wrap;
   gap: 1em;
+
+  @media screen and (max-width: 1800px) {
+    padding: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -22,6 +26,7 @@ const ContainerWrapper = styled.div`
   gap: 4em;
   justify-content: space-between;
   align-items: flex-start;
+  width: 90%;
 
   &.col {
     width: 100%;

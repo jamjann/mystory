@@ -3,12 +3,14 @@ import Icon from "../../utils/Icon";
 import Tag from "./Tag";
 
 const Wrapper = styled.div`
+  width: 100%;
+  height: auto;
   position: relative;
   cursor: pointer;
   svg {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   &:hover {

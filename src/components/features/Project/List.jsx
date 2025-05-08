@@ -18,8 +18,7 @@ const StyledImage = styled(Image)`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-color: var(--middle-grey); */
-  background-color: #384659;
+  background-color: var(--dark-blue);
 `;
 
 const ProjectDetail = styled.div`

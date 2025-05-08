@@ -19,13 +19,12 @@ const Item = styled.div`
   cursor: pointer;
   font-family: var(--text-medium);
   padding: 10px;
-  transition: all 0.3s;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+  border: 1px solid transparent;
 
   &:hover {
-    border-color: var(--main-color);
-    /* background-color: var(--middle-cream); */
+    border-top-color: var(--main-color);
+    border-bottom-color: var(--main-color);
   }
   &.active {
     background-color: var(--main-color);
@@ -33,6 +32,16 @@ const Item = styled.div`
   }
   * {
     margin: 0;
+  }
+
+  @media screen and (max-width: 1800px) {
+    &:hover {
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+
+      border-left-color: var(--main-color);
+      border-right-color: var(--main-color);
+    }
   }
 `;
 

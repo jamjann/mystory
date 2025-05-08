@@ -27,10 +27,14 @@ const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 3em;
-  min-height: 35vh;
+  min-height: 38vh;
 
   @media screen and (max-width: 1800px) {
-    display: block;
+    display: grid;
+    grid-template-columns: initial;
+    grid-template-rows: auto 1fr;
+    gap: 2em;
+    min-height: 35vh;
   }
 `;
 
