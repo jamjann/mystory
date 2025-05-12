@@ -13,6 +13,13 @@ const Highlight = styled.div`
     font-family: var(--text-header);
     letter-spacing: 3px;
   }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.8em;
+    & * {
+      letter-spacing: 1.5px;
+    }
+  }
 `;
 
 const SubHighlight = styled.div`
@@ -24,6 +31,12 @@ const SubHighlight = styled.div`
     color: var(--main-color);
     font-family: var(--text-header);
     text-align: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    & * {
+      padding: 0.8em;
+    }
   }
 `;
 
@@ -69,6 +82,15 @@ const Head = styled.div`
     border-top: 1px solid var(--main-color);
     border-bottom: 1px solid var(--main-color);
     padding: 0.5em;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 2px 0;
+    border-width: 2px;
+    > * {
+      letter-spacing: 1.5px;
+      padding: 0.4em;
+    }
   }
 `;
 

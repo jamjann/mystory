@@ -57,6 +57,12 @@ const Content = styled.div`
     font-family: var(--text-medium);
     letter-spacing: 1px;
   }
+
+  @media screen and (max-width: 480px) {
+    p {
+      letter-spacing: 0.5px;
+    }
+  }
 `;
 
 const Hover = styled.div`

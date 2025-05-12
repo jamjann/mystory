@@ -1,9 +1,22 @@
 import styled from "styled-components";
 import FormattedDate from "../utils/Date";
 import TextWithLine from "../utils/TextWithLine";
+import { MiniTopic } from "../utils/TextStyles";
 
 const Wrapper = styled.div`
   width: 100%;
+`;
+
+const StyledTextWithLine = styled(TextWithLine)`
+  span {
+    height: 3px;
+  }
+
+  @media screen and (max-width: 480px) {
+    span {
+      height: 2px;
+    }
+  }
 `;
 
 const Line = styled.div`
@@ -24,10 +37,36 @@ const Title = styled.div`
   display: grid;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: auto 4fr auto;
-  gap: 1em;
   margin: 0.5em 0 1.5em;
   text-align: center;
+  gap: 1em;
+
+  grid-template-areas: "quote name activity";
+  grid-template-rows: auto;
+  grid-template-columns: auto 4fr auto;
+
+  @media screen and (max-width: 900px) {
+    grid-template-areas:
+      "name name"
+      "quote quote"
+      "activity activity";
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto;
+  }
+  @media screen and (max-width: 480px) {
+    margin: 1em 0;
+  }
+`;
+
+const QuoteCol = styled.div`
+  grid-area: quote;
+`;
+const NameCol = styled.div`
+  grid-area: name;
+`;
+const ActivityCol = styled.div`
+  grid-area: activity;
 `;
 
 const LeftBlock = styled.div`
@@ -40,7 +79,13 @@ const LeftBlock = styled.div`
     font-size: 0.8em;
     margin: 0;
   }
+
+  @media screen and (max-width: 900px) {
+    padding: 0.5em;
+    max-width: 100%;
+  }
 `;
+
 const Center = styled.div`
   h1 {
     font-family: var(--text-header);
@@ -51,6 +96,7 @@ const Center = styled.div`
     margin: 0;
   }
 `;
+
 const RightBlock = styled.div`
   max-width: 14ch;
   text-align: justify;
@@ -62,6 +108,27 @@ const RightBlock = styled.div`
   span {
     font-size: 0.8em;
     margin: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    max-width: 100%;
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: auto 1fr auto;
+    gap: 5px;
+
+    span.dotted {
+      border-bottom: 2px dotted var(--middle-grey);
+    }
+  }
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+    span.dotted {
+      border-bottom-width: 1px;
+    }
   }
 `;
 
@@ -97,6 +164,13 @@ const Jobs = styled.div`
     align-items: center;
     gap: 0.5em;
   }
+
+  @media screen and (max-width: 480px) {
+    margin-top: 5px;
+    h2 {
+      letter-spacing: 0;
+    }
+  }
 `;
 
 const Location = styled.div`
@@ -112,36 +186,45 @@ const PageHeader = () => {
 
   return (
     <Wrapper>
-      <TextWithLine text="Hi guys! welcome you to explore" />
+      <StyledTextWithLine type="small" text="Hi guys! welcome you to explore" />
 
       <Title>
-        <LeftBlock>
-          <span>
-            <b>"It's all about me and my wonderful life"</b>
-          </span>
-        </LeftBlock>
-        <Center>
-          <h1> Phatthawipha J.</h1>
+        <QuoteCol>
+          <LeftBlock>
+            <span>
+              <b>"It's all about me and my wonderful life"</b>
+            </span>
+          </LeftBlock>
+        </QuoteCol>
 
-          <Jobs>
-            {jobs.map((job, idx) => {
-              return (
-                <div key={idx}>
-                  <h2>
-                    <b>{job}</b>
-                  </h2>
-                  {idx < jobs.length - 1 && <Dot />}
-                </div>
-              );
-            })}
-          </Jobs>
-        </Center>
-        <RightBlock>
-          <h4>latest edition</h4>
-          <span>
-            <b>Currently: Enjoying reading a book "Four Thousand Weeks"</b>
-          </span>
-        </RightBlock>
+        <NameCol>
+          <Center>
+            <h1> Phatthawipha J.</h1>
+
+            <Jobs>
+              {jobs.map((job, idx) => {
+                return (
+                  <div key={idx}>
+                    <h2>
+                      <b>{job}</b>
+                    </h2>
+                    {idx < jobs.length - 1 && <Dot />}
+                  </div>
+                );
+              })}
+            </Jobs>
+          </Center>
+        </NameCol>
+
+        <ActivityCol>
+          <RightBlock>
+            <MiniTopic>latest edition</MiniTopic>
+            <span className="dotted" />
+            <span>
+              <b>Currently: Enjoying reading a book "Four Thousand Weeks"</b>
+            </span>
+          </RightBlock>
+        </ActivityCol>
       </Title>
 
       <Line />

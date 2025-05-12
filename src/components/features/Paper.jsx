@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
 
 const Container = styled.div`
@@ -16,6 +17,10 @@ const Container = styled.div`
   /* height: 100%;
   min-height: 85%; */
   position: relative;
+
+  @media screen and (max-width: 1100px) {
+    width: 95%;
+  }
 `;
 
 const Main = styled.div`

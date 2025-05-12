@@ -46,13 +46,7 @@ const Description = styled.div`
   display: grid;
   gap: var(--gap);
   grid-template-columns: 1.5fr 0.5fr;
-
   overflow: hidden;
-
-  & > div {
-    position: relative;
-    padding: 2em;
-  }
 
   & > div + div {
     &::before,
@@ -72,28 +66,65 @@ const Description = styled.div`
     }
   }
 
-  .content {
-    text-align: justify;
-    p {
-      margin: 0;
+  @media screen and (max-width: 900px) {
+    gap: 0;
+    grid-template-columns: 1fr;
+
+    & > div + div {
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
-  .tech {
-    .div {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+`;
+
+const Content = styled.div`
+  position: relative;
+  padding: 2em;
+  text-align: justify;
+  p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    border-bottom: 1px solid var(--main-color);
+  }
+`;
+
+const TechStack = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:before {
+      font-size: 0.75em;
+      content: "★";
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 1em;
+    justify-content: center;
+
+    & > div {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1em;
     }
     p {
-      margin: 0;
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-
-      &:before {
-        font-size: 0.75em;
-        content: "★";
-      }
+      gap: 5px;
     }
   }
 `;
@@ -113,16 +144,16 @@ const List = () => {
                 </h2>
               </StyledTopic>
               <Description>
-                <div className="content">
+                <Content>
                   <p>{description}</p>
-                </div>
-                <div className="tech">
+                </Content>
+                <TechStack>
                   <div>
                     {tech.map((t, idx) => {
                       return <p key={idx}>{t}</p>;
                     })}
                   </div>
-                </div>
+                </TechStack>
               </Description>
             </ProjectDetail>
           </Item>

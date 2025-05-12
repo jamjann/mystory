@@ -2,14 +2,91 @@ import styled from "styled-components";
 import { Head } from "../../utils/TextStyles";
 import Book from "./Book";
 import Card from "./Card";
-import Poster from "./Poster";
 import { certificationList, educationList } from "../../../data";
 import List from "./List";
+import CertificationList from "./CertificationList";
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 0.75fr 1.8fr 1fr;
+  grid-template-areas: "education project certification";
   gap: 2em;
+
+  @media screen and (max-width: 1500px) {
+    grid-template-areas: "education" "project" "certification";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+  @media screen and (max-width: 900px) {
+    gap: 0;
+  }
+`;
+
+const EducationCol = styled.div`
+  grid-area: education;
+`;
+const ProjectCol = styled.div`
+  grid-area: project;
+`;
+const CertificationCol = styled.div`
+  grid-area: certification;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    padding: 3em 0;
+  }
+`;
+
+const EducationContainer = styled.div`
+  display: grid;
+  gap: 2em;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "card"
+    "book";
+
+  @media screen and (max-width: 1500px) {
+    gap: 3em;
+    grid-template-areas: "card book";
+    grid-template-rows: auto;
+    grid-template-columns: 0.75fr 0.25fr;
+    align-items: end;
+  }
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 0.65fr 0.35fr;
+  }
+  @media screen and (max-width: 900px) {
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "card"
+      "book";
+  }
+`;
+
+const CardCol = styled.div`
+  grid-area: card;
+`;
+const BookCol = styled.div`
+  grid-area: book;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    padding: 3em 0;
+  }
+`;
+const BookContainer = styled.div`
+  @media screen and (max-width: 900px) {
+    width: 50%;
+    z-index: 3;
+    margin: auto;
+    position: relative;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+  }
 `;
 
 const Content = styled.div`
@@ -20,60 +97,55 @@ const Content = styled.div`
 
 const Main = styled.div``;
 
-const LeftCol = styled.div`
-  display: flex;
-  gap: 2em;
-  flex-flow: column wrap;
-`;
-
-const RightCol = styled.div``;
-
-const Certification = styled.div`
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1.5em;
+const Bg = styled.div`
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    opacity: 0.6;
+    background-image: radial-gradient(rgb(17 17 17 / 40%) 1px, #ffffff00 1px);
+    background-size: 30px 30px;
+  }
 `;
 
 const Project = () => {
   return (
     <Wrapper>
-      <LeftCol>
-        <Card title="Education" data={educationList} />
-        <Book
-          link="#"
-          tag="limited edition"
-          title="Portfolio"
-          subtitle="Phatthawipha Jeamburanakul"
-        />
-      </LeftCol>
-
-      <Content>
-        <Head>
-          <h3>Pet projects</h3>
-        </Head>
-        <Main>
-          <List />
-        </Main>
-      </Content>
-
-      <RightCol>
-        <Certification>
-          {certificationList.map((item, idx) => {
-            const { type, topic, link, fields } = item;
-            return (
-              <Poster
-                key={idx}
-                idx={idx}
-                type={type}
-                topic={topic}
-                link={link}
-                data={fields}
+      <EducationCol>
+        <EducationContainer>
+          <CardCol>
+            <Card title="Education" data={educationList} />
+          </CardCol>
+          <BookCol>
+            <BookContainer>
+              <Book
+                link="#"
+                tag="limited edition"
+                title="Portfolio"
+                subtitle="Phatthawipha Jeamburanakul"
               />
-            );
-          })}
-        </Certification>
-      </RightCol>
+            </BookContainer>
+            <Bg />
+          </BookCol>
+        </EducationContainer>
+      </EducationCol>
+
+      <ProjectCol>
+        <Content>
+          <Head>
+            <h3>Pet projects</h3>
+          </Head>
+          <Main>
+            <List />
+          </Main>
+        </Content>
+      </ProjectCol>
+
+      <CertificationCol>
+        <CertificationList data={certificationList} />
+        <Bg />
+      </CertificationCol>
     </Wrapper>
   );
 };

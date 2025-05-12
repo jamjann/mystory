@@ -1,15 +1,40 @@
 import styled from "styled-components";
 import Image from "../../utils/Image";
 import { useState } from "react";
-import List from "./List";
 import Detail from "./Detail";
 import { experienceList } from "../../../data";
 import { Head } from "../../utils/TextStyles";
+import PositionList from "./PositionList";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.5fr 1.8fr;
+  grid-template-columns: 0.5fr 2fr;
   gap: 2em;
+  grid-template-areas: "image experience";
+
+  @media screen and (max-width: 1500px) {
+    gap: 2em;
+    grid-template-areas:
+      "image"
+      "experience";
+    grid-template-rows: 200px auto;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-rows: 400px auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-rows: 300px auto;
+  }
+`;
+
+const ImageCol = styled.div`
+  grid-area: image;
+`;
+const ExperienceCol = styled.div`
+  grid-area: experience;
 `;
 
 const ContentArea = styled.div`
@@ -27,7 +52,7 @@ const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 3em;
-  min-height: 38vh;
+  min-height: 40vh;
 
   @media screen and (max-width: 1800px) {
     display: grid;
@@ -48,17 +73,21 @@ const Experience = () => {
 
   return (
     <Wrapper>
-      <ImageArea url={experienceList[activeItem].image} />
+      <ImageCol>
+        <ImageArea url={experienceList[activeItem].image} />
+      </ImageCol>
 
-      <ContentArea>
-        <Head>
-          <h3 className="bold">Experience</h3>
-        </Head>
-        <Content>
-          <List onClick={handleClickItem} activeItem={activeItem} />
-          <Detail id={activeItem} />
-        </Content>
-      </ContentArea>
+      <ExperienceCol>
+        <ContentArea>
+          <Head>
+            <h3 className="bold">Experience</h3>
+          </Head>
+          <Content>
+            <PositionList onClick={handleClickItem} activeItem={activeItem} />
+            <Detail id={activeItem} />
+          </Content>
+        </ContentArea>
+      </ExperienceCol>
     </Wrapper>
   );
 };

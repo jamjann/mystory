@@ -2,7 +2,7 @@ const skillList = {
   language: ["JavaScript", "TypeScript", "CSS/ SCSS", "PHP"],
   "library & framework": [
     "React",
-    "Vue.js",
+    "React Native",
     "Ruby on Rails",
     "Node.js",
     "Express",
@@ -212,7 +212,7 @@ const experienceList = [
     position: [
       {
         title: "Teaching Assistant",
-        subtitle: "Computer & Programming Course",
+        // subtitle: "Computer & Programming Course",
         info: [
           {
             title: "Computer & Programming",

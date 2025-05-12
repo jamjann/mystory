@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  width: 100%;
   padding: 1.5em 2em;
   border: 1px solid var(--main-color);
   text-align: justify;
@@ -10,6 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const SmallWrapper = styled.div`
+  width: 100%;
   padding: 1em;
   border: 1px solid var(--main-color);
   display: flex;

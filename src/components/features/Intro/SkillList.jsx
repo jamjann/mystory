@@ -40,6 +40,10 @@ const Skill = styled.div`
 const Dotted = styled.span`
   width: 100%;
   border-bottom: 2px dotted var(--middle-grey);
+
+  @media screen and (max-width: 480px) {
+    border-bottom-width: 1px;
+  }
 `;
 
 const SkillList = () => {

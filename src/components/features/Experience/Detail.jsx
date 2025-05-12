@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { experienceList } from "../../../data";
-import { MiniTopic, Topic } from "../../utils/TextStyles";
+import { Topic } from "../../utils/TextStyles";
 import FocusText from "../../utils/FocusText";
-import { SmallBox } from "../../utils/Box";
+import TechStack from "./TechStack";
+import InfoList from "./InfoList";
+import TaskList from "./TaskList";
 
 const Wrapper = styled.div`
   display: grid;
@@ -32,12 +34,32 @@ const ContainerWrapper = styled.div`
     width: 100%;
     grid-template-columns: 0.75fr 0.25fr;
   }
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    gap: 2em;
+
+    &.col {
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    gap: 1.5em;
+  }
 `;
+
 const StyledTopic = styled(Topic)`
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
   gap: 10px;
+
+  @media screen and (max-width: 480px) {
+    gap: 5px;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -48,97 +70,14 @@ const Subtitle = styled.div`
 `;
 
 const Duration = styled.div`
-  font-family: var(--text-medium);
+  font-family: var(--text-bold);
   text-transform: uppercase;
   color: var(--middle-grey);
   font-size: 0.85em;
   margin-top: 10px;
-`;
 
-const Description = styled.div`
-  margin-top: 1.5em;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: justify;
-  gap: 10px;
-`;
-
-const Point = styled.div`
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-
-  p {
-    margin: 0;
-  }
-
-  &:before {
-    font-size: 0.75em;
-    content: "★";
-  }
-
-  .content {
-    margin-top: 10px;
-    p {
-      &:before {
-        content: "•";
-        margin-right: 5px;
-      }
-    }
-  }
-`;
-
-const Info = styled.div`
-  div {
-    display: flex;
-    gap: 5px;
-  }
-  p {
-    font-size: 0.8em;
-    color: var(--dark-beige);
-    margin: 0;
-    text-align: left;
-  }
-  .text {
-    display: block;
-    margin-top: 10px;
-    text-align: justify;
-  }
-`;
-
-const InfoList = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1em;
-`;
-
-const TechStack = styled.div`
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
-  gap: 1.5em;
-  margin-top: 3em;
-
-  p {
-    margin: 0;
-    b {
-      font-family: var(--text-bold);
-      text-transform: uppercase;
-      margin: 0;
-      font-size: 0.85em;
-    }
-  }
-`;
-
-const SkillList = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  gap: 10px;
-
-  p {
-    font-size: 0.85em;
-    padding: 5px 10px;
-    border: 1px dashed var(--main-color);
+  @media screen and (max-width: 480px) {
+    margin-top: 5px;
   }
 `;
 
@@ -159,68 +98,20 @@ const Detail = ({ id }) => {
                   </h2>
                   {subtitle ? (
                     <Subtitle>
-                      <h3>
-                        in <span className="expand">{subtitle}</span> @{" "}
-                        {company}
-                      </h3>
+                      in <span className="expand">{subtitle}</span> @ {company}
                     </Subtitle>
                   ) : (
                     <Subtitle> @ {company}</Subtitle>
                   )}
                 </StyledTopic>
                 <Duration>{duration}</Duration>
-
-                <Description>
-                  {description.map((point, idx) => {
-                    return (
-                      <Point key={idx}>
-                        <div>
-                          <p>{point.text}</p>
-                          {point.content && (
-                            <div className="content">
-                              {point.content.map((c, idx) => {
-                                return <p key={idx}>{c}</p>;
-                              })}
-                            </div>
-                          )}
-                        </div>
-                      </Point>
-                    );
-                  })}
-                </Description>
+                <TaskList data={description} />
               </div>
-              {info && (
-                <InfoList>
-                  {info.map((i) => {
-                    return (
-                      <SmallBox>
-                        <Info>
-                          <div>
-                            <span className="star">* </span>
-                            <p className="bold">{i.title}</p>
-                          </div>
-                          <p className="text">{i.detail}</p>
-                        </Info>
-                      </SmallBox>
-                    );
-                  })}
-                </InfoList>
-              )}
+
+              {info && <InfoList data={info} />}
             </ContainerWrapper>
-            {skill && (
-              <TechStack>
-                <MiniTopic>tech stack</MiniTopic>
-                <SkillList>
-                  {skill.map((s, idx) => {
-                    return (
-                      <p key={idx} className="text">
-                        {s}
-                      </p>
-                    );
-                  })}
-                </SkillList>
-              </TechStack>
-            )}
+
+            {skill && <TechStack data={skill} />}
           </Container>
         );
       })}

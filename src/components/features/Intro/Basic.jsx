@@ -18,6 +18,12 @@ const StyledFocusArea = styled(FocusArea)`
     top: 0;
     left: -15px;
   }
+
+  @media screen and (max-width: 480px) {
+    .star {
+      left: -8px;
+    }
+  }
 `;
 
 const Basic = () => {

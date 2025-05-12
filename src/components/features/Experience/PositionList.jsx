@@ -13,9 +13,33 @@ const Wrapper = styled.div`
     text-align: center;
     padding: 0;
   }
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding: 0;
+
+    & > div {
+      width: 50%;
+      border-bottom: 1px solid var(--main-color);
+      border-left: 1px solid var(--main-color);
+      &:nth-child(1) {
+        width: 100%;
+        border-left: none;
+      }
+      &:nth-child(even) {
+        border-left: none;
+      }
+      &:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+    }
+  }
 `;
 
 const Item = styled.div`
+  font-size: 0.85em;
   cursor: pointer;
   font-family: var(--text-medium);
   padding: 10px;
@@ -43,9 +67,19 @@ const Item = styled.div`
       border-right-color: var(--main-color);
     }
   }
+
+  @media screen and (max-width: 900px) {
+    &:hover {
+      background-color: var(--dark-blue);
+      color: white;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    padding: 8px;
+  }
 `;
 
-const List = ({ onClick, activeItem }) => {
+const PositionList = ({ onClick, activeItem }) => {
   return (
     <Wrapper>
       {experienceList.map((item, idx) => {
@@ -63,4 +97,4 @@ const List = ({ onClick, activeItem }) => {
   );
 };
 
-export default List;
+export default PositionList;

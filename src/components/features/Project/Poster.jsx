@@ -79,7 +79,7 @@ const Poster = ({ idx, type, topic, data, link }) => {
       )}
       <Content>
         <Container>
-          <TextWithLine type="small" text={type} />
+          <TextWithLine type="mini" text={type} />
           <div>
             <Topic>{topic}</Topic>
             {data.map((field, idx) => {

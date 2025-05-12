@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   text-align: center;
+  height: 100%;
   .caption {
     font-size: 0.8em;
     font-family: var(--text-header);
@@ -10,7 +11,7 @@ const Wrapper = styled.div`
 
 const Photo = styled.div`
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 `;
 
 const Image = ({ className, url, caption }) => {
