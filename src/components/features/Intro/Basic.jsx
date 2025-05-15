@@ -61,9 +61,10 @@ const Basic = () => {
           customers' requirements and the end users' needs.
         </p>
         <p>
-          I'm passionate about using my knowledge to create something new for
-          society and the world. I also love challenging myself by accomplishing
-          things beyond my familiarity and outside my comfort zone.
+          I'm a quick learner, eager to learn new technologies, and passionate
+          about using my skills to create something new and valuable for society
+          and the world. I also love challenging myself by accomplishing things
+          beyond my familiarity and outside my comfort zone.
         </p>
       </Paragraph>
     </Wrapper>

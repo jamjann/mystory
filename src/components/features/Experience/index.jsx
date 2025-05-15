@@ -67,7 +67,6 @@ const Experience = () => {
   const [activeItem, setActiveItem] = useState(0);
 
   const handleClickItem = (idx) => {
-    console.log("idx", idx);
     setActiveItem(idx);
   };
 

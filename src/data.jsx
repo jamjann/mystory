@@ -1,3 +1,6 @@
+// const intro =
+//   "Experienced Software Engineer with a demonstrated history of working in the design industry. Skilled in Robot Operating System (ROS), React.js, Ruby on Rails, PHP, WordPress, and User Interface Design. Strong engineering professional with a Bachelor of Engineering - BE focused in Computer Engineering from Kasetsart University. ";
+
 const skillList = {
   language: ["JavaScript", "TypeScript", "CSS/ SCSS", "PHP"],
   "library & framework": [
@@ -13,7 +16,7 @@ const skillList = {
 const experienceList = [
   {
     company: "Self Employed",
-    image: "/src/assets/images/jamjann-02.jpg",
+    image: "/src/assets/images/experience/current.jpg",
     position: [
       {
         title: "Full-Stack Developer",
@@ -22,13 +25,13 @@ const experienceList = [
           "CSS/ SCSS",
           "PHP",
           "JavaScript",
+          "TypeScript",
           "Node.js",
           "React",
           "React Native",
           "PostgreSQL",
           "REST API",
           "Wordpress",
-          "Concrete",
           "Git",
         ],
         description: [
@@ -39,13 +42,13 @@ const experienceList = [
             text: "Enhance the performance of the website by creating a web content application focusing on SEO, leading to an increase of over 1200% in organic traffic on the website after a few months of launching",
           },
           {
-            text: "Solve the pain points of the existing system that customers are facing while providing practical solutions to ensure the highest efficiency of products for end users, resulting in more than 4000 non-tech savvy users accessing and using the service more easily conveniently",
+            text: "Solve the pain points of the existing system that customers are facing while providing practical solutions to ensure the highest efficiency of products for end users, resulting in more than 4000 non-tech savvy users accessing and using the service more conveniently",
           },
           {
             text: "Experience working with various programming languages, frameworks, CMS, and technologies using design methods and technologies relevant to customers' requirements and project details",
           },
           {
-            text: "Implement custom components and integrating web and mobile applications with open-source technologies, third-party applications and APIs, such as payment gateways, social media platforms, and analytics tools",
+            text: "Implement custom components and integrate web and mobile applications with open-source technologies, third-party applications and APIs, such as payment gateways, social media platforms, and analytics tools",
           },
         ],
       },
@@ -53,10 +56,10 @@ const experienceList = [
   },
   {
     company: "Hobbiz",
-    image: "/src/assets/images/jamjann-01.jpg",
+    image: "/src/assets/images/experience/hobbiz.jpg",
     position: [
       {
-        title: "Software Developer",
+        title: "Software Engineer",
         duration: "NOV 2018 - JUL 2022",
         skill: [
           "CSS/ SCSS",
@@ -66,6 +69,7 @@ const experienceList = [
           "React Native",
           "REST API",
           "Wordpress",
+          "Drupal",
           "Git",
         ],
         info: [
@@ -94,7 +98,7 @@ const experienceList = [
   },
   {
     company: "SNEAK",
-    image: "/src/assets/images/jamjann-02.jpg",
+    image: "/src/assets/images/experience/sneak.jpg",
     position: [
       {
         title: "Software Engineer",
@@ -102,7 +106,7 @@ const experienceList = [
         skill: [
           "TypeScript",
           "React",
-          "Ruby",
+          "Ruby on Rails",
           "Gatsby",
           "PostgreSQL",
           "GraphQL",
@@ -120,7 +124,7 @@ const experienceList = [
             text: "Develop a platform as a web application with a mobile-first strategy to create a user-friendly product suitable for the leading target group, resulting in a 10x increase in users within 4 months and over 10,000 itineraries created after launching",
           },
           {
-            text: "Experience in product research and design based on user-centred design and A/B testing, resulting in being an award-winning product in 2019 Thailand's MICE Startup program and being selected as one of the top 15 finalists in the Dtac Accelerate Batch 7",
+            text: `Experience in product research and design based on user-centred design and A/B testing, resulting in being an award-winning product in "2019 Thailand's MICE Startup" program, being selected as one of the top 15 finalists in the "Dtac Accelerate Batch 7" and the team chosen to participate in "Echelon Asia Summit 2019"`,
           },
           {
             text: "Participate in all processes related to system development from UX testing to software implementation, including conducting user interviews and surveys to gather feedback and insights for product improvement",
@@ -134,10 +138,10 @@ const experienceList = [
   },
   {
     company: "KOS Design",
-    image: "/src/assets/images/jamjann-02.jpg",
+    image: "/src/assets/images/experience/kos.jpg",
     position: [
       {
-        title: "Software Developer",
+        title: "Software Engineer",
         duration: "SEP 2015 - MAY 2019",
         skill: [
           "CSS/ SCSS",
@@ -174,7 +178,7 @@ const experienceList = [
   },
   {
     company: "SKUBA",
-    image: "/src/assets/images/jamjann-02.jpg",
+    image: "/src/assets/images/experience/skuba.jpg",
     position: [
       {
         title: "Research Engineer",
@@ -194,7 +198,7 @@ const experienceList = [
         skill: ["Python", "MongoDB", "ROS"],
         description: [
           {
-            text: "Participate as a core member of the sole robot development team from Thailand and one of the 14 finalist teams in the Robocup@Home competition, the world's largest robotics competition for autonomous service, held annually among students and robotics / AI experts worldwide",
+            text: `Participate as a core member of the sole robot development team from Thailand and one of the 14 finalist teams in the "Robocup@Home" competition, the world's largest robotics competition for autonomous service, held annually among students and robotics / AI experts worldwide`,
           },
           {
             text: "Implement new object recognition algorithm and voice recognition system by using ROS, pocketsphinx, Flite, SURF, and KNN algorithm to improve the robot's ability to recognize objects and understand human commands",
@@ -208,7 +212,7 @@ const experienceList = [
   },
   {
     company: "Kasetsart University",
-    image: "/src/assets/images/jamjann-02.jpg",
+    image: "/src/assets/images/experience/kasetsart.jpg",
     position: [
       {
         title: "Teaching Assistant",
@@ -241,10 +245,10 @@ const experienceList = [
   },
   {
     company: "GPSC",
-    image: "/src/assets/images/jamjann-02.jpg",
+    image: "/src/assets/images/experience/gpsc.jpg",
     position: [
       {
-        title: "Software Developer Intern",
+        title: "Software Engineer Intern",
         info: [
           {
             title: "GPSC",
@@ -308,11 +312,25 @@ const certificationList = [
 
 const projectList = [
   {
-    name: "How's the weather there?",
-    image: "/src/assets/images/project-01.png",
+    name: "how's the weather there?",
+    image: "/src/assets/images/projects/weather.jpg",
     description:
-      "A simple weather app that provides current weather information and forecasts for any location. Users can search for a city and view the current temperature, humidity, wind speed, and a 7-day forecast.",
-    tech: ["JavaScript", "HTML", "CSS"],
+      "A minimal weather app that provides current weather information and forecasts for any location. Users can search for a city and view the current temperature, time and weather conditions",
+    tech: ["JavaScript", "HTML", "CSS", "REST API"],
+  },
+  {
+    name: "found it!",
+    image: "/src/assets/images/projects/found-it.jpg",
+    description:
+      "A hidden object game that challenges players to find objects hidden in a picture. The game ends when all items are found in the least amount of time to beat other players on the leaderboard",
+    tech: ["React", "Node.js (Express)", "PosrtgreSQL", "REST API"],
+  },
+  {
+    name: "interes(thing)",
+    image: "/src/assets/images/projects/interest.jpg",
+    description:
+      "An app that allows users to create and share their interests with others via photos. Users can create a profile, add their interests, and connect with other users by liking and commenting on their posts",
+    tech: ["Node.js (Express)", "PosrtgreSQL"],
   },
 ];
 

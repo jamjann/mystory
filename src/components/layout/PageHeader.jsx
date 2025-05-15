@@ -2,6 +2,7 @@ import styled from "styled-components";
 import FormattedDate from "../utils/Date";
 import TextWithLine from "../utils/TextWithLine";
 import { MiniTopic } from "../utils/TextStyles";
+import Link from "../utils/Link";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -229,14 +230,16 @@ const PageHeader = () => {
 
       <Line />
       <Description>
-        <a href="/">Resume</a>
-
+        <Link color="purple" to="https://github.com/jamjann" text="Github" />
         <Location>
           <p>Vancouver,</p>
           <FormattedDate date={date} />
         </Location>
-
-        <a href="/">Contact</a>
+        <Link
+          color="purple"
+          to="https://www.linkedin.com/in/jamjann/"
+          text="LinkedIn"
+        />
       </Description>
       <Line />
     </Wrapper>

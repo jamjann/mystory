@@ -5,6 +5,7 @@ import Field from "../../utils/Field";
 import SkillList from "./SkillList";
 import Hobby from "./Hobby";
 import Basic from "./Basic";
+import Link from "../../utils/Link";
 
 const Wrapper = styled.div`
   display: grid;
@@ -82,6 +83,7 @@ const MainPhoto = styled(Image)`
 `;
 
 const StyledSmallBox = styled(SmallBox)`
+  justify-content: center;
   @media screen and (max-width: 900px) {
     justify-content: center;
   }
@@ -111,7 +113,11 @@ const Intro = () => {
       <HobbyCol>
         <ContentArea>
           <Field title="email" color="pink">
-            <a href="mailto:im@jamjann.dev">im@jamjann.dev</a>
+            <Link
+              color="purple"
+              link="mailto:im@jamjann.dev"
+              text="im@jamjann.dev"
+            />
           </Field>
           <StyledSmallBox>
             <p>
