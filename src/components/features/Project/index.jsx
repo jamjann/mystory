@@ -3,12 +3,14 @@ import { Head } from "../../utils/TextStyles";
 import Book from "./Book";
 import Card from "./Card";
 import { certificationList, educationList } from "../../../data";
-import List from "./List";
+import Detail from "./Detail";
 import CertificationList from "./CertificationList";
+import { useState } from "react";
+import Carousel from "./Carousel";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.75fr 1.8fr 1fr;
+  grid-template-columns: 0.75fr 1.55fr 1fr;
   grid-template-areas: "education project certification";
   gap: 2em;
 
@@ -31,6 +33,7 @@ const ProjectCol = styled.div`
 const CertificationCol = styled.div`
   grid-area: certification;
   position: relative;
+  display: grid;
 
   @media screen and (max-width: 900px) {
     padding: 3em 0;
@@ -95,7 +98,11 @@ const Content = styled.div`
   gap: 1em;
 `;
 
-const Main = styled.div``;
+const Main = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+`;
 
 const Bg = styled.div`
   @media screen and (max-width: 900px) {
@@ -110,6 +117,13 @@ const Bg = styled.div`
 `;
 
 const Project = () => {
+  const [activeItem, setActiveItem] = useState(0);
+
+  const handleClickItem = (idx) => {
+    console.log("idx", idx);
+    setActiveItem(idx);
+  };
+
   return (
     <Wrapper>
       <EducationCol>
@@ -137,7 +151,8 @@ const Project = () => {
             <h3>Pet projects</h3>
           </Head>
           <Main>
-            <List />
+            <Detail id={activeItem} />
+            <Carousel onClick={handleClickItem} activeItem={activeItem} />
           </Main>
         </Content>
       </ProjectCol>

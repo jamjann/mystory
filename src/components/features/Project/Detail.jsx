@@ -14,11 +14,11 @@ const Item = styled.div`
 
 const StyledImage = styled(Image)`
   width: 100%;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--dark-blue);
+  background-color: var(--main-color);
 `;
 
 const ProjectDetail = styled.div`
@@ -129,38 +129,34 @@ const TechStack = styled.div`
   }
 `;
 
-const List = () => {
+const Detail = ({ id }) => {
+  const { image, name, description, tech } = projectList[id];
   return (
     <Wrapper>
-      {projectList.map((item, idx) => {
-        const { image, name, description, tech } = item;
-        return (
-          <Item key={idx}>
-            <StyledImage url={image} />
-            <ProjectDetail>
-              <StyledTopic>
-                <h2>
-                  <FocusText color={"green"}>{name}</FocusText>
-                </h2>
-              </StyledTopic>
-              <Description>
-                <Content>
-                  <p>{description}</p>
-                </Content>
-                <TechStack>
-                  <div>
-                    {tech.map((t, idx) => {
-                      return <p key={idx}>{t}</p>;
-                    })}
-                  </div>
-                </TechStack>
-              </Description>
-            </ProjectDetail>
-          </Item>
-        );
-      })}
+      <Item>
+        <StyledImage url={image} />
+        <ProjectDetail>
+          <StyledTopic>
+            <h2>
+              <FocusText color={"green"}>{name}</FocusText>
+            </h2>
+          </StyledTopic>
+          <Description>
+            <Content>
+              <p>{description}</p>
+            </Content>
+            <TechStack>
+              <div>
+                {tech.map((t, idx) => {
+                  return <p key={idx}>{t}</p>;
+                })}
+              </div>
+            </TechStack>
+          </Description>
+        </ProjectDetail>
+      </Item>
     </Wrapper>
   );
 };
 
-export default List;
+export default Detail;
