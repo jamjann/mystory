@@ -116,7 +116,7 @@ const Bg = styled.div`
   }
 `;
 
-const Project = () => {
+const Project = ({ onHandleModal }) => {
   const [activeItem, setActiveItem] = useState(0);
 
   const handleClickItem = (idx) => {
@@ -138,6 +138,7 @@ const Project = () => {
                 tag="limited edition"
                 title="Portfolio"
                 subtitle="Phatthawipha Jeamburanakul"
+                onClick={onHandleModal}
               />
             </BookContainer>
             <Bg />

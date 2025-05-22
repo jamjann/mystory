@@ -114,7 +114,7 @@ const Hover = styled.div`
   }
 `;
 
-const Book = ({ title, subtitle, tag, link }) => {
+const Book = ({ title, subtitle, tag, onClick }) => {
   return (
     <Wrapper>
       <Container>
@@ -129,7 +129,7 @@ const Book = ({ title, subtitle, tag, link }) => {
       <Icon.Book />
 
       <Hover className="hover">
-        <a href={link}>
+        <a onClick={onClick}>
           <p>open it</p>
         </a>
         <div className="icon">

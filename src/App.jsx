@@ -8,6 +8,10 @@ import Experience from "./components/features/Experience/";
 import Project from "./components/features/Project";
 import PageFooter from "./components/layout/PageFooter";
 
+import { useState } from "react";
+import Modal from "./components/utils/Modal";
+import Portfolio from "./components/features/Modal/portfolio";
+
 const PageWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -63,6 +67,23 @@ const StyledHighlight = styled(Highlight)`
 `;
 
 const App = () => {
+  const [isModalActive, setIsModalActive] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleModal = (id) => {
+    setIsLoading(true);
+    setIsModalActive(true);
+    setActiveModal(id);
+
+    setTimeout(() => setIsLoading(false), 400);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalActive(false);
+    setActiveModal(null);
+  };
+
   return (
     <PageWrapper>
       <Paper>
@@ -78,12 +99,18 @@ const App = () => {
 
               <Experience />
 
-              <Project />
+              <Project onHandleModal={() => handleModal("portfolio")} />
             </PageContent>
             <PageFooter />
           </Area>
         </Container>
       </Paper>
+
+      {isModalActive && (
+        <Modal onClose={handleCloseModal} isLoading={isLoading}>
+          {activeModal === "portfolio" && <Portfolio />}
+        </Modal>
+      )}
     </PageWrapper>
   );
 };
