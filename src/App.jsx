@@ -10,7 +10,7 @@ import PageFooter from "./components/layout/PageFooter";
 
 import { useState } from "react";
 import Modal from "./components/utils/Modal";
-import Portfolio from "./components/features/Modal/portfolio";
+import Portfolio from "./components/features/Modal/Portfolio";
 
 const PageWrapper = styled.div`
   width: 100%;
