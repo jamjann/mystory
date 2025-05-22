@@ -14,11 +14,15 @@ const Item = styled.div`
 
 const StyledImage = styled(Image)`
   width: 100%;
-  padding-bottom: 60%;
+  padding-bottom: 52%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--main-color);
+
+  @media screen and (max-width: 900px) {
+    padding-bottom: 60%;
+  }
 `;
 
 const ProjectDetail = styled.div`

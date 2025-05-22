@@ -10,7 +10,7 @@ import Carousel from "./Carousel";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.75fr 1.55fr 1fr;
+  grid-template-columns: 0.75fr 1.8fr 1fr;
   grid-template-areas: "education project certification";
   gap: 2em;
 
