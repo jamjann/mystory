@@ -1,4 +1,4 @@
-import FlipBook from "../../utils/Flipbook";
+import FlipBook from "../../utils/FlipBook";
 import file from "../../../assets/portfolio.pdf";
 import styled from "styled-components";
 import { useScreenSize } from "../../../utils";
