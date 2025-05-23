@@ -32,6 +32,7 @@ const Wrapper = styled.div`
 
 const ImageCol = styled.div`
   grid-area: image;
+  overflow: hidden;
 `;
 const ExperienceCol = styled.div`
   grid-area: experience;
@@ -46,6 +47,15 @@ const ImageArea = styled(Image)`
   width: 100%;
   height: 100%;
   transition: all 0.3s;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+
+  filter: blur(3px);
+  transition: all 0.5s;
+
+  &.active {
+    filter: blur(0);
+  }
 `;
 
 const Content = styled.div`
@@ -65,15 +75,22 @@ const Content = styled.div`
 
 const Experience = () => {
   const [activeItem, setActiveItem] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleClickItem = (idx) => {
-    setActiveItem(idx);
+  const handleClickItem = (id) => {
+    setIsLoading(true);
+    setActiveItem(id);
+
+    setTimeout(() => setIsLoading(false), 400);
   };
 
   return (
     <Wrapper>
       <ImageCol>
-        <ImageArea url={experienceList[activeItem].image} />
+        <ImageArea
+          url={experienceList[activeItem].image}
+          className={!isLoading && "active"}
+        />
       </ImageCol>
 
       <ExperienceCol>

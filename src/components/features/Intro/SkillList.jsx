@@ -20,7 +20,7 @@ const Type = styled.div`
   width: 100%;
   display: grid;
   align-items: baseline;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: max-content 1fr;
   gap: 10px;
 `;
 
@@ -29,7 +29,7 @@ const Skill = styled.div`
   width: 100%;
   display: grid;
   align-items: baseline;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr max-content;
   gap: 10px;
   p {
     font-size: 0.85em;

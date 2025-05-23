@@ -76,7 +76,7 @@ const App = () => {
     setIsModalActive(true);
     setActiveModal(id);
 
-    setTimeout(() => setIsLoading(false), 400);
+    setTimeout(() => setIsLoading(false), 500);
   };
 
   const handleCloseModal = () => {

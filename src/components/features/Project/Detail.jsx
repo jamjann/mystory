@@ -12,6 +12,9 @@ const Item = styled.div`
   gap: 1em;
 `;
 
+const ImageBlock = styled.div`
+  overflow: hidden;
+`;
 const StyledImage = styled(Image)`
   width: 100%;
   padding-bottom: 52%;
@@ -19,6 +22,15 @@ const StyledImage = styled(Image)`
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+
+  transition: all 0.3s;
+  filter: blur(3px);
+  transition: all 0.5s;
+
+  &.active {
+    filter: blur(0);
+  }
 
   @media screen and (max-width: 900px) {
     padding-bottom: 60%;
@@ -133,12 +145,16 @@ const TechStack = styled.div`
   }
 `;
 
-const Detail = ({ id }) => {
+const Detail = ({ id, isLoading }) => {
   const { image, name, description, tech } = projectList[id];
+
   return (
     <Wrapper>
       <Item>
-        <StyledImage url={image} />
+        <ImageBlock>
+          <StyledImage url={image} className={!isLoading && "active"} />
+        </ImageBlock>
+
         <ProjectDetail>
           <StyledTopic>
             <h2>

@@ -118,10 +118,13 @@ const Bg = styled.div`
 
 const Project = ({ onHandleModal }) => {
   const [activeItem, setActiveItem] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleClickItem = (idx) => {
-    console.log("idx", idx);
-    setActiveItem(idx);
+  const handleClickItem = (id) => {
+    setIsLoading(true);
+    setActiveItem(id);
+
+    setTimeout(() => setIsLoading(false), 400);
   };
 
   return (
@@ -152,7 +155,7 @@ const Project = ({ onHandleModal }) => {
             <h3>Pet projects</h3>
           </Head>
           <Main>
-            <Detail id={activeItem} />
+            <Detail id={activeItem} isLoading={isLoading} />
             <Carousel onClick={handleClickItem} activeItem={activeItem} />
           </Main>
         </Content>
