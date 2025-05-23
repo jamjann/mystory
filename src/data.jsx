@@ -16,7 +16,7 @@ const skillList = {
 const experienceList = [
   {
     company: "Self Employed",
-    image: "/src/assets/images/experience/current.jpg",
+    image: "/images/experience/current.jpg",
     position: [
       {
         title: "Full-Stack Developer",
@@ -56,7 +56,7 @@ const experienceList = [
   },
   {
     company: "Hobbiz",
-    image: "/src/assets/images/experience/hobbiz.jpg",
+    image: "/images/experience/hobbiz.jpg",
     position: [
       {
         title: "Software Engineer",
@@ -98,7 +98,7 @@ const experienceList = [
   },
   {
     company: "SNEAK",
-    image: "/src/assets/images/experience/sneak.jpg",
+    image: "/images/experience/sneak.jpg",
     position: [
       {
         title: "Software Engineer",
@@ -138,7 +138,7 @@ const experienceList = [
   },
   {
     company: "KOS Design",
-    image: "/src/assets/images/experience/kos.jpg",
+    image: "/images/experience/kos.jpg",
     position: [
       {
         title: "Software Engineer",
@@ -178,7 +178,7 @@ const experienceList = [
   },
   {
     company: "SKUBA",
-    image: "/src/assets/images/experience/skuba.jpg",
+    image: "/images/experience/skuba.jpg",
     position: [
       {
         title: "Research Engineer",
@@ -212,7 +212,7 @@ const experienceList = [
   },
   {
     company: "Kasetsart University",
-    image: "/src/assets/images/experience/kasetsart.jpg",
+    image: "/images/experience/kasetsart.jpg",
     position: [
       {
         title: "Teaching Assistant",
@@ -245,7 +245,7 @@ const experienceList = [
   },
   {
     company: "GPSC",
-    image: "/src/assets/images/experience/gpsc.jpg",
+    image: "/images/experience/gpsc.jpg",
     position: [
       {
         title: "Software Engineer Intern",
@@ -313,21 +313,21 @@ const certificationList = [
 const projectList = [
   {
     name: "how's the weather there?",
-    image: "/src/assets/images/projects/weather.jpg",
+    image: "/images/projects/weather.jpg",
     description:
       "A minimal weather app that provides current weather information and forecasts for any location. Users can search for a city and view the current temperature, time and weather conditions",
     tech: ["JavaScript", "HTML", "CSS", "REST API"],
   },
   {
     name: "found it!",
-    image: "/src/assets/images/projects/found-it.jpg",
+    image: "/images/projects/found-it.jpg",
     description:
       "A hidden object game that challenges players to find objects hidden in a picture. The game ends when all items are found in the least amount of time to beat other players on the leaderboard",
     tech: ["React", "Node.js (Express)", "PosrtgreSQL", "REST API"],
   },
   {
     name: "interes(thing)",
-    image: "/src/assets/images/projects/interest.jpg",
+    image: "/images/projects/interest.jpg",
     description:
       "An app that allows users to create and share their interests with others via photos. Users can create a profile, add their interests, and connect with other users by liking and commenting on their posts",
     tech: ["Node.js (Express)", "PosrtgreSQL"],

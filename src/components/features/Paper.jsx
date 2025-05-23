@@ -28,7 +28,7 @@ const Main = styled.div`
   height: 100%;
   position: relative;
   background-color: var(--beige);
-  background-image: url("/src/assets/images/paper.png");
+  background-image: url("/images/paper.png");
   background-size: contain;
   border-radius: 2px;
   z-index: 3;
@@ -38,7 +38,7 @@ const Sub = styled.div`
   width: 100%;
   height: 96%;
   position: absolute;
-  background-image: url("/src/assets/images/paper.png");
+  background-image: url("/images/paper.png");
   background-size: contain;
   background-color: var(--middle-dark-cream);
   transform: skewX(-2deg) rotate(-0deg);
@@ -51,7 +51,7 @@ const Sub2 = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("/src/assets/images/paper.png");
+  background-image: url("/images/paper.png");
   background-size: contain;
   background-color: var(--dark-cream);
   transform: rotate(-1deg);
@@ -65,7 +65,7 @@ const Sub3 = styled.div`
   width: 103%;
   height: 100%;
   position: absolute;
-  background-image: url("/src/assets/images/paper.png");
+  background-image: url("/images/paper.png");
   background-size: contain;
   background-color: var(--dark-beige);
   transform: skewX(-0.5deg);
