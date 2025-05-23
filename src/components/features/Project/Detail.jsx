@@ -14,6 +14,8 @@ const Item = styled.div`
 
 const ImageBlock = styled.div`
   overflow: hidden;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 `;
 const StyledImage = styled(Image)`
   width: 100%;
@@ -21,13 +23,10 @@ const StyledImage = styled(Image)`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
+  background-image: none;
 
   transition: all 0.3s;
-  filter: blur(3px);
-  transition: all 0.5s;
-
+  filter: blur(2px);
   &.active {
     filter: blur(0);
   }

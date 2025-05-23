@@ -32,7 +32,10 @@ const Wrapper = styled.div`
 
 const ImageCol = styled.div`
   grid-area: image;
+
   overflow: hidden;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
 `;
 const ExperienceCol = styled.div`
   grid-area: experience;
@@ -46,13 +49,10 @@ const ContentArea = styled.div`
 const ImageArea = styled(Image)`
   width: 100%;
   height: 100%;
+  background-image: none;
+
   transition: all 0.3s;
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
-
-  filter: blur(3px);
-  transition: all 0.5s;
-
+  filter: blur(2px);
   &.active {
     filter: blur(0);
   }
