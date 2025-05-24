@@ -49,12 +49,15 @@ const ContentArea = styled.div`
 const ImageArea = styled(Image)`
   width: 100%;
   height: 100%;
-  background-image: none;
 
-  transition: all 0.3s;
-  filter: blur(2px);
+  &.loading {
+    filter: blur(2px);
+    background-image: none;
+    transition: all 0.3s;
+  }
   &.active {
     filter: blur(0);
+    transition: all 1s;
   }
 `;
 
@@ -89,7 +92,7 @@ const Experience = () => {
       <ImageCol>
         <ImageArea
           url={experienceList[activeItem].image}
-          className={!isLoading && "active"}
+          className={!isLoading ? "active" : "loading"}
         />
       </ImageCol>
 

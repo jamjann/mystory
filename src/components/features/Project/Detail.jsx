@@ -23,12 +23,15 @@ const StyledImage = styled(Image)`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: none;
 
-  transition: all 0.3s;
-  filter: blur(2px);
+  &.loading {
+    filter: blur(2px);
+    background-image: none;
+    transition: all 0.3s;
+  }
   &.active {
     filter: blur(0);
+    transition: all 1s;
   }
 
   @media screen and (max-width: 900px) {
@@ -151,7 +154,10 @@ const Detail = ({ id, isLoading }) => {
     <Wrapper>
       <Item>
         <ImageBlock>
-          <StyledImage url={image} className={!isLoading && "active"} />
+          <StyledImage
+            url={image}
+            className={!isLoading ? "active" : "loading"}
+          />
         </ImageBlock>
 
         <ProjectDetail>

@@ -20,8 +20,13 @@ const Type = styled.div`
   width: 100%;
   display: grid;
   align-items: baseline;
+  justify-content: space-between;
   grid-template-columns: max-content 1fr;
   gap: 10px;
+
+  @media screen and (max-width: 480px) {
+    gap: 5px;
+  }
 `;
 
 const Skills = styled.div``;
@@ -29,11 +34,16 @@ const Skill = styled.div`
   width: 100%;
   display: grid;
   align-items: baseline;
+  justify-content: space-between;
   grid-template-columns: 1fr max-content;
   gap: 10px;
   p {
     font-size: 0.85em;
     margin: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    gap: 5px;
   }
 `;
 
