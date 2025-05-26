@@ -22,9 +22,12 @@ const Type = styled.div`
   align-items: baseline;
   justify-content: space-between;
   grid-template-columns: max-content 1fr;
+  grid-template-columns: -webkit-max-content 1fr;
   gap: 10px;
-
-  @media screen and (max-width: 480px) {
+  p {
+    width: -webkit-fit-content;
+  }
+  @media screen and (max-width: 550px) {
     gap: 5px;
   }
 `;
@@ -36,13 +39,14 @@ const Skill = styled.div`
   align-items: baseline;
   justify-content: space-between;
   grid-template-columns: 1fr max-content;
+  grid-template-columns: 1fr -webkit-max-content;
   gap: 10px;
   p {
     font-size: 0.85em;
     margin: 0;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     gap: 5px;
   }
 `;
@@ -51,7 +55,7 @@ const Dotted = styled.span`
   width: 100%;
   border-bottom: 2px dotted var(--middle-grey);
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     border-bottom-width: 1px;
   }
 `;

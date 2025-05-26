@@ -9,11 +9,11 @@ import Link from "../../utils/Link";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.4fr 0.65fr auto 0.4fr;
+  grid-template-columns: 0.4fr 0.65fr 0.45fr 0.45fr;
   gap: 3em;
   grid-template-areas: "skill basic photo hobby";
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1550px) {
     gap: 2em;
     grid-template-areas:
       "basic basic basic photo"
@@ -80,6 +80,7 @@ const ContentArea = styled.div`
 const MainPhoto = styled(Image)`
   width: 100%;
   padding-bottom: 100%;
+  background-position: bottom;
 `;
 
 const StyledSmallBox = styled(SmallBox)`
@@ -105,8 +106,7 @@ const Intro = () => {
       <PhotoCol>
         <MainPhoto
           url="/images/jamjann.jpg"
-          caption="Phatthawipha and her chilled days in Whistler, British
-          Columbia, Canada"
+          caption="Phatthawipha and her chilled days in Whistler, Canada"
         />
       </PhotoCol>
 

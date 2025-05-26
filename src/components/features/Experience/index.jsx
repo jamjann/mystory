@@ -12,12 +12,12 @@ const Wrapper = styled.div`
   gap: 2em;
   grid-template-areas: "image experience";
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1550px) {
     gap: 2em;
     grid-template-areas:
       "image"
       "experience";
-    grid-template-rows: 200px auto;
+    grid-template-rows: 350px auto;
     grid-template-columns: 1fr;
   }
 
@@ -25,17 +25,15 @@ const Wrapper = styled.div`
     grid-template-rows: 400px auto;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     grid-template-rows: 300px auto;
   }
 `;
 
 const ImageCol = styled.div`
   grid-area: image;
-
+  background-color: var(--main-color);
   overflow: hidden;
-  background-color: transparent;
-  border: 1px solid var(--main-color);
 `;
 const ExperienceCol = styled.div`
   grid-area: experience;
@@ -51,28 +49,32 @@ const ImageArea = styled(Image)`
   height: 100%;
 
   &.loading {
-    filter: blur(2px);
-    background-image: none;
-    transition: all 0.3s;
+    filter: blur(10px);
   }
   &.active {
     filter: blur(0);
-    transition: all 1s;
+    transition: background-image 0.5s ease-in-out 0.2s;
+    -webkit-transition: background-image 0.5s ease-in-out 0.2s;
   }
 `;
 
 const Content = styled.div`
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 0.9fr 4fr;
   gap: 3em;
-  min-height: 40vh;
+  min-height: 35em;
 
+  @media screen and (max-width: 2200px) {
+    min-height: 38em;
+  }
   @media screen and (max-width: 1800px) {
     display: grid;
     grid-template-columns: initial;
     grid-template-rows: auto 1fr;
     gap: 2em;
-    min-height: 35vh;
+  }
+  @media screen and (max-width: 1550px) {
+    min-height: auto;
   }
 `;
 
@@ -82,9 +84,9 @@ const Experience = () => {
 
   const handleClickItem = (id) => {
     setIsLoading(true);
-    setActiveItem(id);
 
-    setTimeout(() => setIsLoading(false), 400);
+    setActiveItem(id);
+    setIsLoading(false);
   };
 
   return (

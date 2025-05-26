@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Document, Page as ReactPdfPage, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
+  "pdfjs-dist/legacy/build/pdf.worker.min.mjs",
   import.meta.url
 ).toString();
 
@@ -43,6 +43,7 @@ const FlipBook = ({ pdfFile, size }) => {
       <Document
         file={pdfFile}
         onLoadSuccess={onDocumentLoadSuccess}
+        onError={(error) => console.error("PDF Load Error:", error)}
         options={options}
       >
         <HTMLFlipBook

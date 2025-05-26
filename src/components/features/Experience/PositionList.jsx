@@ -74,7 +74,7 @@ const Item = styled.div`
       color: white;
     }
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     padding: 8px;
   }
 `;

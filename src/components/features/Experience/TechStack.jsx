@@ -10,6 +10,7 @@ const Wrapper = styled.div`
 
   p {
     margin: 0;
+    width: -webkit-fit-content;
   }
 
   @media screen and (max-width: 1100px) {
@@ -36,7 +37,7 @@ const SkillList = styled.div`
     border: 1px dashed var(--main-color);
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     gap: 8px;
     p {
       padding: 5px;

@@ -148,7 +148,7 @@ p {
     font-size: 13px;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1550px) {
   html,
   body,
   a,
@@ -162,7 +162,16 @@ p {
   body,
   a,
   p {
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  html,
+  body,
+  a,
+  p {
+    font-size: 12px;
   }
 }
 
@@ -176,6 +185,6 @@ p {
   body,
   a,
   p {
-    font-size: 8px;
+    font-size: 10px;
   }
 }

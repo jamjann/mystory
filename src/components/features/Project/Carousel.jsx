@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { projectList } from "../../../data";
 import Icon from "../../utils/Icon";
+import { useState } from "react";
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,27 +10,44 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Item = styled.div`
+const ItemWrapper = styled.div`
   color: var(--main-color);
-
-  &.active {
-    color: var(--palette-red);
-  }
+  cursor: pointer;
 
   svg {
-    width: 20px;
-    height: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    transition: all 0.4s;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 900px) {
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
     svg {
       width: 12px;
       height: 12px;
     }
   }
 `;
+
+const Item = ({ onClick, isActive }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <ItemWrapper
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
+    >
+      {isActive ? <Icon.Star /> : <Icon.StarStatus isHovered={isHovered} />}
+    </ItemWrapper>
+  );
+};
 
 const Carousel = ({ onClick, activeItem }) => {
   return (
@@ -39,10 +57,8 @@ const Carousel = ({ onClick, activeItem }) => {
           <Item
             key={idx}
             onClick={() => onClick(idx)}
-            className={activeItem === idx && "active"}
-          >
-            {activeItem === idx ? <Icon.Star /> : <Icon.StarOutline />}
-          </Item>
+            isActive={activeItem === idx}
+          />
         );
       })}
     </Wrapper>

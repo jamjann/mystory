@@ -14,12 +14,12 @@ const Wrapper = styled.div`
   grid-template-areas: "education project certification";
   gap: 2em;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1550px) {
     grid-template-areas: "education" "project" "certification";
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     gap: 0;
   }
 `;
@@ -29,13 +29,20 @@ const EducationCol = styled.div`
 `;
 const ProjectCol = styled.div`
   grid-area: project;
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 2em;
+  }
 `;
 const CertificationCol = styled.div`
   grid-area: certification;
   position: relative;
   display: grid;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1550px) {
+    padding: 1.5em 0;
+  }
+  @media screen and (max-width: 1000px) {
     padding: 3em 0;
   }
 `;
@@ -48,17 +55,20 @@ const EducationContainer = styled.div`
     "card"
     "book";
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1550px) {
     gap: 3em;
     grid-template-areas: "card book";
     grid-template-rows: auto;
     grid-template-columns: 0.75fr 0.25fr;
     align-items: end;
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 0.7fr 0.3fr;
+  }
+  @media screen and (max-width: 1200px) {
     grid-template-columns: 0.65fr 0.35fr;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
     gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -75,20 +85,31 @@ const BookCol = styled.div`
   grid-area: book;
   position: relative;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
     padding: 3em 0;
   }
 `;
 const BookContainer = styled.div`
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
     width: 50%;
     z-index: 3;
     margin: auto;
     position: relative;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     width: 80%;
+  }
+`;
+const PortFolioBg = styled.div`
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    opacity: 0.6;
+    background-image: radial-gradient(rgb(17 17 17 / 40%) 1px, #ffffff00 1px);
+    background-size: 30px 30px;
   }
 `;
 
@@ -104,8 +125,8 @@ const Main = styled.div`
   gap: 1em;
 `;
 
-const Bg = styled.div`
-  @media screen and (max-width: 900px) {
+const CertificateBg = styled.div`
+  @media screen and (max-width: 1000px) {
     width: 100%;
     height: 100%;
     top: 0;
@@ -122,9 +143,9 @@ const Project = ({ onHandleModal }) => {
 
   const handleClickItem = (id) => {
     setIsLoading(true);
-    setActiveItem(id);
 
-    setTimeout(() => setIsLoading(false), 400);
+    setActiveItem(id);
+    setIsLoading(false);
   };
 
   return (
@@ -144,7 +165,7 @@ const Project = ({ onHandleModal }) => {
                 onClick={onHandleModal}
               />
             </BookContainer>
-            <Bg />
+            <PortFolioBg />
           </BookCol>
         </EducationContainer>
       </EducationCol>
@@ -163,7 +184,7 @@ const Project = ({ onHandleModal }) => {
 
       <CertificationCol>
         <CertificationList data={certificationList} />
-        <Bg />
+        <CertificateBg />
       </CertificationCol>
     </Wrapper>
   );

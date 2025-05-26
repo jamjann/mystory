@@ -6,6 +6,9 @@ const Wrapper = styled.div`
   .caption {
     font-size: 0.8em;
     font-family: var(--text-header);
+    line-height: 1.5;
+    display: inline-block;
+    margin-top: 0.5em;
   }
 `;
 

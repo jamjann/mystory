@@ -57,7 +57,7 @@ const StyledTopic = styled(Topic)`
   align-items: baseline;
   gap: 10px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     gap: 5px;
   }
 `;
@@ -76,7 +76,7 @@ const Duration = styled.div`
   font-size: 0.85em;
   margin-top: 10px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     margin-top: 5px;
   }
 `;

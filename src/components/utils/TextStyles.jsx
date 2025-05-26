@@ -14,7 +14,7 @@ const Highlight = styled.div`
     letter-spacing: 3px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     padding: 0.8em;
     & * {
       letter-spacing: 1.5px;
@@ -33,7 +33,7 @@ const SubHighlight = styled.div`
     text-align: center;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     & * {
       padding: 0.8em;
     }
@@ -84,7 +84,7 @@ const Head = styled.div`
     padding: 0.5em;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     padding: 2px 0;
     border-width: 2px;
     > * {

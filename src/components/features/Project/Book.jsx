@@ -45,6 +45,8 @@ const StyledTag = styled(Tag)`
 `;
 
 const Content = styled.div`
+  padding: 0 1.5em;
+
   h3 {
     font-family: var(--text-bold);
     font-size: 1.5em;
@@ -58,7 +60,7 @@ const Content = styled.div`
     letter-spacing: 1px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     p {
       letter-spacing: 0.5px;
     }

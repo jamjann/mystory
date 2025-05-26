@@ -3,6 +3,7 @@ import TextWithLine from "../utils/TextWithLine";
 
 const Wrapper = styled.div`
   width: 100%;
+  margin-top: 1em;
 `;
 
 const StyledTextWithLine = styled(TextWithLine)`
@@ -10,7 +11,7 @@ const StyledTextWithLine = styled(TextWithLine)`
     height: 3px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     width: 100%;
     grid-template-columns: 1fr;
     text-align: center;

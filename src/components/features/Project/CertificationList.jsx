@@ -7,19 +7,21 @@ const Wrapper = styled.div`
   display: grid;
   gap: 1.5em;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1550px) {
     gap: 2em;
     grid-template-columns: 0.5fr 0.5fr;
   }
   @media screen and (max-width: 1000px) {
     gap: 2em;
     grid-template-columns: 1fr;
-  }
-  @media screen and (max-width: 900px) {
     width: 80%;
     margin: auto;
   }
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 600px) {
     width: 100%;
   }
 `;

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { projectList } from "../../../data";
 import Image from "../../utils/Image";
-import { Topic } from "../../utils/TextStyles";
+import { MiniTopic, Topic } from "../../utils/TextStyles";
 import FocusText from "../../utils/FocusText";
+import ImageFilter from "../../utils/ImageFilter";
 
 const Wrapper = styled.div``;
 
@@ -15,7 +16,7 @@ const Item = styled.div`
 const ImageBlock = styled.div`
   overflow: hidden;
   background-color: var(--main-color);
-  border: 1px solid var(--main-color);
+  position: relative;
 `;
 const StyledImage = styled(Image)`
   width: 100%;
@@ -26,12 +27,11 @@ const StyledImage = styled(Image)`
 
   &.loading {
     filter: blur(2px);
-    background-image: none;
-    transition: all 0.3s;
   }
   &.active {
     filter: blur(0);
-    transition: all 1s;
+    transition: background-image 0.5s ease-in-out 0.2s;
+    -webkit-transition: background-image 0.5s ease-in-out 0.2s;
   }
 
   @media screen and (max-width: 900px) {
@@ -63,7 +63,7 @@ const Description = styled.div`
 
   display: grid;
   gap: var(--gap);
-  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-columns: 2fr 0.5fr;
   overflow: hidden;
 
   & > div + div {
@@ -99,10 +99,13 @@ const Description = styled.div`
 
 const Content = styled.div`
   position: relative;
-  padding: 2em;
+  padding: 1.5em 2em;
   text-align: justify;
   p {
     margin: 0;
+  }
+  p + p {
+    margin-top: 8px;
   }
 
   @media screen and (max-width: 900px) {
@@ -113,6 +116,7 @@ const Content = styled.div`
 const TechStack = styled.div`
   position: relative;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 
   & > div {
@@ -120,11 +124,12 @@ const TechStack = styled.div`
     flex-direction: column;
     text-align: center;
   }
-  p {
+  .list p {
     margin: 0;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 0.85em;
 
     &:before {
       font-size: 0.75em;
@@ -154,6 +159,7 @@ const Detail = ({ id, isLoading }) => {
     <Wrapper>
       <Item>
         <ImageBlock>
+          <ImageFilter />
           <StyledImage
             url={image}
             className={!isLoading ? "active" : "loading"}
@@ -168,10 +174,11 @@ const Detail = ({ id, isLoading }) => {
           </StyledTopic>
           <Description>
             <Content>
+              <MiniTopic>Description :</MiniTopic>
               <p>{description}</p>
             </Content>
             <TechStack>
-              <div>
+              <div className="list">
                 {tech.map((t, idx) => {
                   return <p key={idx}>{t}</p>;
                 })}

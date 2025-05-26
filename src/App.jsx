@@ -23,17 +23,17 @@ const Container = styled.div`
   overflow: hidden;
   height: 100%;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     padding: 2em;
   }
 `;
 
 const Area = styled.div`
   display: grid;
-  gap: 3em;
+  gap: 2em;
   height: 100%;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     gap: 0em;
   }
 `;
@@ -42,11 +42,7 @@ const PageContent = styled.div`
   display: grid;
   gap: 3em;
 
-  @media screen and (max-width: 1500px) {
-    gap: 2em;
-  }
-  @media screen and (max-width: 900px) {
-    gap: 3em;
+  @media screen and (max-width: 1000px) {
     margin-top: 2em;
   }
 `;
@@ -58,7 +54,7 @@ const StyledHighlight = styled(Highlight)`
       margin: auto;
     }
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     h2 {
       font-size: 1em;
       width: 100%;

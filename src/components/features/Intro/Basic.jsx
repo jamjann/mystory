@@ -19,7 +19,7 @@ const StyledFocusArea = styled(FocusArea)`
     left: -15px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     .star {
       left: -8px;
     }
@@ -54,11 +54,11 @@ const Basic = () => {
         <p>
           Throughout my career, I've worked with businesses of all scales to
           initiate and contribute to successful projects, including{" "}
-          <FocusText color="pink">
-            consulting, designing, and developing
-          </FocusText>{" "}
-          websites, mobile applications, and internal systems that meet my
-          customers' requirements and the end users' needs.
+          <FocusText color="pink">consulting</FocusText>,{" "}
+          <FocusText color="pink">designing</FocusText>, and{" "}
+          <FocusText color="pink">developing</FocusText> websites, mobile
+          applications, and internal systems that meet my customers'
+          requirements and the end users' needs.
         </p>
         <p>
           I'm a quick learner, eager to learn new technologies, and passionate

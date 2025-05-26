@@ -13,7 +13,7 @@ const StyledTextWithLine = styled(TextWithLine)`
     height: 3px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     span {
       height: 2px;
     }
@@ -55,7 +55,7 @@ const Title = styled.div`
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto auto;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     margin: 1em 0;
   }
 `;
@@ -122,7 +122,7 @@ const RightBlock = styled.div`
       border-bottom: 2px dotted var(--middle-grey);
     }
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     text-align: center;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -142,6 +142,7 @@ const Description = styled.div`
   font-family: var(--text-header);
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding: 0.5em 0;
   p,
   a {
     font-size: 0.65em;
@@ -166,7 +167,7 @@ const Jobs = styled.div`
     gap: 0.5em;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     margin-top: 5px;
     h2 {
       letter-spacing: 0;
@@ -179,6 +180,10 @@ const Location = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2px;
+  line-height: normal;
+  p {
+    margin: 0;
+  }
 `;
 
 const PageHeader = () => {

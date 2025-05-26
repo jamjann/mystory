@@ -7,7 +7,10 @@ const Wrapper = styled.div`
   text-align: justify;
   gap: 10px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 900px) {
+    gap: 8px;
+  }
+  @media screen and (max-width: 550px) {
     gap: 5px;
   }
 `;
