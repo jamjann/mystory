@@ -5,19 +5,34 @@ import { useState } from "react";
 
 const Wrapper = styled.div`
   display: flex;
-  gap: 1em;
+  gap: 0.8em;
   align-items: center;
   justify-content: center;
 `;
 
 const ItemWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--main-color);
   cursor: pointer;
+
+  &.active,
+  &:hover {
+    svg {
+      fill: var(--main-color);
+    }
+  }
 
   svg {
     width: 18px;
     height: 18px;
-    transition: all 0.4s;
+    transition: all 0.5s;
+
+    fill: transparent;
+    stroke: var(--main-color);
+    stroke-width: 120px;
+    overflow: visible;
   }
 
   @media screen and (max-width: 900px) {
@@ -36,15 +51,9 @@ const ItemWrapper = styled.div`
 `;
 
 const Item = ({ onClick, isActive }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <ItemWrapper
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
-    >
-      {isActive ? <Icon.Star /> : <Icon.StarStatus isHovered={isHovered} />}
+    <ItemWrapper onClick={onClick} className={isActive && "active"}>
+      <Icon.Star />
     </ItemWrapper>
   );
 };

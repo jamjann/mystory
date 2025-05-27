@@ -42,8 +42,10 @@ const Skill = styled.div`
   grid-template-columns: 1fr -webkit-max-content;
   gap: 10px;
   p {
+    width: fit-content;
     font-size: 0.85em;
     margin: 0;
+    text-align: right;
   }
 
   @media screen and (max-width: 550px) {

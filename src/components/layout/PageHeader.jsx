@@ -101,6 +101,10 @@ const Center = styled.div`
 const RightBlock = styled.div`
   max-width: 14ch;
   text-align: justify;
+  .currently {
+    width: fit-content;
+    width: -webkit-fit-content;
+  }
   h4 {
     font-family: var(--text-bold);
     text-transform: uppercase;
@@ -127,9 +131,21 @@ const RightBlock = styled.div`
     grid-template-columns: auto;
     grid-template-rows: auto auto;
 
+    .currently {
+      width: 100%;
+    }
     span.dotted {
       border-bottom-width: 1px;
     }
+  }
+`;
+
+const StyledMiniTopic = styled(MiniTopic)`
+  width: fit-content;
+  width: -webkit-fit-content;
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
   }
 `;
 
@@ -224,9 +240,9 @@ const PageHeader = () => {
 
         <ActivityCol>
           <RightBlock>
-            <MiniTopic>latest edition</MiniTopic>
+            <StyledMiniTopic>latest edition</StyledMiniTopic>
             <span className="dotted" />
-            <span>
+            <span className="currently">
               <b>Currently: Enjoying reading a book "Four Thousand Weeks"</b>
             </span>
           </RightBlock>

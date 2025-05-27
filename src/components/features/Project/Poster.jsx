@@ -31,7 +31,7 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
   padding: 1.5em 2em;
   position: absolute;
   gap: 1em;
