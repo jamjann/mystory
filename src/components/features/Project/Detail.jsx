@@ -174,7 +174,7 @@ const Detail = ({ id, isLoading }) => {
           </StyledTopic>
           <Description>
             <Content>
-              <MiniTopic>Description :</MiniTopic>
+              <MiniTopic>Description:</MiniTopic>
               <p>{description}</p>
             </Content>
             <TechStack>

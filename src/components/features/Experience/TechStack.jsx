@@ -20,7 +20,6 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 900px) {
     gap: 1em;
-    margin-top: 1.5em;
     grid-template-columns: auto;
     grid-template-rows: auto;
   }

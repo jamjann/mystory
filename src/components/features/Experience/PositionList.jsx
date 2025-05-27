@@ -19,22 +19,6 @@ const Wrapper = styled.div`
     flex-flow: row wrap;
     text-align: center;
     padding: 0;
-
-    & > div {
-      width: 50%;
-      border-bottom: 1px solid var(--main-color);
-      border-left: 1px solid var(--main-color);
-      &:nth-child(1) {
-        width: 100%;
-        border-left: none;
-      }
-      &:nth-child(even) {
-        border-left: none;
-      }
-      &:nth-last-child(-n + 2) {
-        border-bottom: none;
-      }
-    }
   }
 `;
 
@@ -59,6 +43,16 @@ const Item = styled.div`
   }
 
   @media screen and (max-width: 1800px) {
+    &:nth-child(1) {
+      &:hover {
+        border-left-color: transparent;
+      }
+    }
+    &:nth-last-child(1) {
+      &:hover {
+        border-right-color: transparent;
+      }
+    }
     &:hover {
       border-top-color: transparent;
       border-bottom-color: transparent;
@@ -69,11 +63,27 @@ const Item = styled.div`
   }
 
   @media screen and (max-width: 900px) {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+
+    &:nth-child(1) {
+      width: 100%;
+    }
+    &:nth-last-child(-n + 2) {
+      border-bottom: none;
+    }
+    &:nth-child(even) {
+      border-right: 1px solid var(--main-color);
+    }
+
     &:hover {
       background-color: var(--dark-blue);
+      border-color: var(--main-color);
       color: white;
     }
   }
+
   @media screen and (max-width: 550px) {
     padding: 8px;
   }
