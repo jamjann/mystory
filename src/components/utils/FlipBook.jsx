@@ -19,6 +19,11 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
+
+  .react-pdf__message {
+    color: white;
+    text-align: center;
+  }
 `;
 
 const PageWrapper = styled.div``;
