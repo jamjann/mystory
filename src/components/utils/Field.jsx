@@ -3,7 +3,7 @@ import { MiniTopic } from "./TextStyles";
 
 const Wrapper = styled.div`
   border: 1px solid var(--main-color);
-  display: grid;
+  display: flex;
   align-items: center;
   text-align: justify;
   grid-template-columns: 0.5fr 2fr;
@@ -20,6 +20,7 @@ const Title = styled.div`
 `;
 
 const Value = styled.div`
+  width: 100%;
   padding: 1em;
   text-align: center;
   font-family: var(--text-medium);
