@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { MiniTopic } from "../../utils/TextStyles";
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   align-items: baseline;
   gap: 1.5em;
   margin-top: 3em;
 
+  > p {
+    min-width: max-content;
+  }
   p {
     margin: 0;
     width: -webkit-fit-content;
@@ -19,9 +21,11 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 900px) {
-    gap: 1em;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    display: block;
+    > p {
+      width: 100%;
+      margin-bottom: 1em;
+    }
   }
 `;
 
