@@ -4,6 +4,7 @@ import { Highlight, MiniTopic, SubHighlight } from "../../utils/TextStyles";
 
 const Wrapper = styled.div`
   width: 100%;
+  height: auto;
   text-align: justify;
   display: flex;
   flex-flow: column wrap;
@@ -12,7 +13,8 @@ const Wrapper = styled.div`
 
 const Head = styled.div``;
 const List = styled.div`
-  display: grid;
+  display: flex;
+  flex-flow: column wrap;
   gap: 1.5em;
 `;
 
