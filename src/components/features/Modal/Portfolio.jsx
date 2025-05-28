@@ -1,7 +1,7 @@
 import FlipBook from "../../utils/FlipBook";
 import file from "../../../assets/portfolio.pdf";
 import styled from "styled-components";
-import { useScreenSize } from "../../../utils";
+import { useScreenSize } from "../../../services/screen";
 
 const Wrapper = styled.div`
   display: flex;

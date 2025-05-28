@@ -11,6 +11,7 @@ import PageFooter from "./components/layout/PageFooter";
 import { useState } from "react";
 import Modal from "./components/utils/Modal";
 import Portfolio from "./components/features/Modal/Portfolio";
+import { useScroll } from "./services/scroll";
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -66,21 +67,21 @@ const App = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { enableScroll, disableScroll } = useScroll();
 
   const handleModal = (id) => {
+    disableScroll();
     setIsLoading(true);
     setIsModalActive(true);
     setActiveModal(id);
 
-    document.body.classList.add("hidden");
     setTimeout(() => setIsLoading(false), 500);
   };
 
   const handleCloseModal = () => {
+    enableScroll();
     setIsModalActive(false);
     setActiveModal(null);
-
-    document.body.classList.remove("hidden");
   };
 
   return (

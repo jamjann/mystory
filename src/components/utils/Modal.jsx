@@ -6,11 +6,14 @@ const Wrapper = styled.div`
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: 9;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(17 17 17 / 80%); */
+  background-color: rgb(17 17 17 / 80%);
 `;
 
 const Container = styled.div`
