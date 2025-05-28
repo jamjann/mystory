@@ -72,12 +72,15 @@ const App = () => {
     setIsModalActive(true);
     setActiveModal(id);
 
+    document.body.classList.add("hidden");
     setTimeout(() => setIsLoading(false), 500);
   };
 
   const handleCloseModal = () => {
     setIsModalActive(false);
     setActiveModal(null);
+
+    document.body.classList.remove("hidden");
   };
 
   return (

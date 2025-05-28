@@ -3,14 +3,14 @@ import Icon from "./Icon";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(17 17 17 / 80%);
+  /* background-color: rgb(17 17 17 / 80%); */
 `;
 
 const Container = styled.div`
