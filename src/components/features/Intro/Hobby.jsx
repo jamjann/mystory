@@ -7,13 +7,17 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column wrap;
   gap: 1.5em;
+
+  h3 {
+    font-size: 1em;
+  }
 `;
 
 const Hobby = () => {
   return (
     <Wrapper>
       <Highlight>
-        <h4>Outside of work</h4>
+        <h3>Outside of work</h3>
       </Highlight>
       <Paragraph>
         <p>

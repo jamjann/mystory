@@ -11,7 +11,11 @@ const Wrapper = styled.div`
   gap: 1.5em;
 `;
 
-const Head = styled.div``;
+const Head = styled.div`
+  h3 {
+    font-size: 1em;
+  }
+`;
 const List = styled.div`
   display: flex;
   flex-flow: column wrap;
@@ -69,7 +73,7 @@ const SkillList = () => {
     <Wrapper>
       <Head>
         <Highlight>
-          <h4>some technologies</h4>
+          <h3>some technologies</h3>
         </Highlight>
         <SubHighlight>
           <p>I've been working with</p>
