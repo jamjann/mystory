@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ImageFilter = styled.div`
   position: absolute;
-  background-image: url("/images/paper.png");
+  background-image: url("/images/paper.webp");
   background-size: contain;
   width: 100%;
   height: 100%;

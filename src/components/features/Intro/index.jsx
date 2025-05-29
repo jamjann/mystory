@@ -105,7 +105,7 @@ const Intro = () => {
 
       <PhotoCol>
         <MainPhoto
-          url="/images/jamjann.jpg"
+          url="/images/jamjann.webp"
           caption="Phatthawipha and her chilled days in Whistler, Canada"
         />
       </PhotoCol>
@@ -115,7 +115,7 @@ const Intro = () => {
           <Field title="email" color="pink">
             <Link
               color="purple"
-              link="mailto:im@jamjann.dev"
+              to="mailto:im@jamjann.dev"
               text="im@jamjann.dev"
             />
           </Field>

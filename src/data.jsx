@@ -16,7 +16,7 @@ const skillList = {
 const experienceList = [
   {
     company: "Self Employed",
-    image: "/images/experience/current.jpg",
+    image: "/images/experience/current.webp",
     position: [
       {
         title: "Full-Stack Developer",
@@ -56,7 +56,7 @@ const experienceList = [
   },
   {
     company: "Hobbiz",
-    image: "/images/experience/hobbiz.jpg",
+    image: "/images/experience/hobbiz.webp",
     position: [
       {
         title: "Software Engineer",
@@ -98,7 +98,7 @@ const experienceList = [
   },
   {
     company: "SNEAK",
-    image: "/images/experience/sneak.jpg",
+    image: "/images/experience/sneak.webp",
     position: [
       {
         title: "Software Engineer",
@@ -138,7 +138,7 @@ const experienceList = [
   },
   {
     company: "KOS Design",
-    image: "/images/experience/kos.jpg",
+    image: "/images/experience/kos.webp",
     position: [
       {
         title: "Software Engineer",
@@ -178,7 +178,7 @@ const experienceList = [
   },
   {
     company: "SKUBA",
-    image: "/images/experience/skuba.jpg",
+    image: "/images/experience/skuba.webp",
     position: [
       {
         title: "Research Engineer",
@@ -212,7 +212,7 @@ const experienceList = [
   },
   {
     company: "Kasetsart University",
-    image: "/images/experience/kasetsart.jpg",
+    image: "/images/experience/kasetsart.webp",
     position: [
       {
         title: "Teaching Assistant",
@@ -245,7 +245,7 @@ const experienceList = [
   },
   {
     company: "GPSC",
-    image: "/images/experience/gpsc.jpg",
+    image: "/images/experience/gpsc.webp",
     position: [
       {
         title: "Software Engineer Intern",

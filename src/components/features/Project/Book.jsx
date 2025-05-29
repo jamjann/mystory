@@ -111,7 +111,7 @@ const Hover = styled.div`
     position: absolute;
     top: 0;
     background-color: rgb(247 242 228 / 90%);
-    background-image: url("/images/paper.png");
+    background-image: url("/images/paper.webp");
     background-size: 500%;
   }
 `;
