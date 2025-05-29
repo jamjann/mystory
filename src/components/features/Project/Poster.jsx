@@ -25,6 +25,17 @@ const StyledTag = styled(Tag)`
     left: 50px;
     bottom: -10px;
   }
+
+  @media screen and (max-width: 550px) {
+    &.tr {
+      right: 20px;
+      top: -10px;
+    }
+    &.bl {
+      left: 20px;
+      bottom: -10px;
+    }
+  }
 `;
 
 const Content = styled.div`

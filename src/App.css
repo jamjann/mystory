@@ -180,11 +180,23 @@ p {
     font-size: 2.6em;
     line-height: 1.1;
   }
+  h2 {
+    font-size: 1.3em;
+  }
 
   html,
   body,
   a,
   p {
-    font-size: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  html,
+  body,
+  a,
+  p {
+    font-size: 11px;
   }
 }

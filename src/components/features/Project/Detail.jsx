@@ -142,11 +142,21 @@ const TechStack = styled.div`
     justify-content: center;
 
     & > div {
-      flex-direction: row;
+      flex-flow: row wrap;
       justify-content: center;
-      gap: 1em;
+    }
+    .list p {
     }
     p {
+      gap: 5px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    & > div {
+      gap: 5px 10px;
+    }
+    .list p {
       gap: 5px;
     }
   }

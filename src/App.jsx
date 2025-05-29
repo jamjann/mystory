@@ -30,6 +30,9 @@ const Container = styled.div`
   @media screen and (max-width: 550px) {
     padding: 2em;
   }
+  @media screen and (max-width: 360px) {
+    padding: 1em;
+  }
 `;
 
 const Area = styled.div`

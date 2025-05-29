@@ -151,7 +151,7 @@ const StyledMiniTopic = styled(MiniTopic)`
 
 const Description = styled.div`
   display: grid;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   grid-template-columns: auto 4fr auto;
   gap: 1em;
