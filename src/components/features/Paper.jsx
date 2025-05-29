@@ -80,9 +80,9 @@ const Paper = ({ children }) => {
     <Wrapper>
       <Container>
         <Main>{children}</Main>
-        <Sub></Sub>
+        {/* <Sub></Sub>
         <Sub2></Sub2>
-        <Sub3></Sub3>
+        <Sub3></Sub3> */}
       </Container>
     </Wrapper>
   );

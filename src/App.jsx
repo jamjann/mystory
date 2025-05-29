@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import "./App.css";
-import { lazy, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import PageHeader from "./components/layout/PageHeader";
 import PageFooter from "./components/layout/PageFooter";
 import Paper from "./components/features/Paper";
 import { Highlight } from "./components/utils/TextStyles";
-
-// import Project from "./components/features/Project";
-// import Experience from "./components/features/Experience/";
 
 import Modal from "./components/utils/Modal";
 import Portfolio from "./components/features/Modal/Portfolio";
@@ -46,6 +43,8 @@ const Area = styled.div`
 `;
 
 const PageContent = styled.div`
+  width: 100%;
+  height: 100%;
   display: grid;
   gap: 3em;
 
@@ -68,6 +67,8 @@ const StyledHighlight = styled(Highlight)`
     }
   }
 `;
+
+const renderLoader = () => <p>Loading</p>;
 
 const App = () => {
   const [isModalActive, setIsModalActive] = useState(false);
@@ -101,11 +102,13 @@ const App = () => {
                 <h2> - Girl who loves eating while coding -</h2>
               </StyledHighlight>
 
-              <Intro />
-
+              <Suspense fallback={renderLoader()}>
+                <Intro />
+                {/* 
               <Experience />
 
-              <Project onHandleModal={() => handleModal("portfolio")} />
+              <Project onHandleModal={() => handleModal("portfolio")} /> */}
+              </Suspense>
             </PageContent>
             <PageFooter />
           </Area>
