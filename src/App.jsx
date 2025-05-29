@@ -1,18 +1,21 @@
 import styled from "styled-components";
 import "./App.css";
+import { lazy, useState } from "react";
 import PageHeader from "./components/layout/PageHeader";
+import PageFooter from "./components/layout/PageFooter";
 import Paper from "./components/features/Paper";
 import { Highlight } from "./components/utils/TextStyles";
-import Intro from "./components/features/Intro";
-import Experience from "./components/features/Experience/";
-import Project from "./components/features/Project";
-import PageFooter from "./components/layout/PageFooter";
 
-import { useState } from "react";
+// import Project from "./components/features/Project";
+// import Experience from "./components/features/Experience/";
+
 import Modal from "./components/utils/Modal";
 import Portfolio from "./components/features/Modal/Portfolio";
+import Intro from "./components/features/Intro";
 import { useScroll } from "./services/scroll";
 
+const Experience = lazy(() => import("./components/features/Experience"));
+const Project = lazy(() => import("./components/features/Project"));
 const PageWrapper = styled.div`
   width: 100%;
   height: 100%;

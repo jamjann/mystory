@@ -78,16 +78,6 @@ const Hover = styled.div`
   justify-content: center;
   align-items: center;
 
-  a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    cursor: pointer;
-  }
-
   p {
     font-family: var(--text-bold);
     border: 1px solid var(--main-color);
@@ -116,6 +106,16 @@ const Hover = styled.div`
   }
 `;
 
+const Button = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+`;
+
 const Book = ({ title, subtitle, tag, onClick }) => {
   return (
     <Wrapper>
@@ -131,9 +131,9 @@ const Book = ({ title, subtitle, tag, onClick }) => {
       <Icon.Book />
 
       <Hover className="hover">
-        <a onClick={onClick}>
+        <Button onClick={onClick}>
           <p>open it</p>
-        </a>
+        </Button>
         <div className="icon">
           <Icon.BookOpen />
         </div>

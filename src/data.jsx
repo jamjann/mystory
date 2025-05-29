@@ -313,21 +313,21 @@ const certificationList = [
 const projectList = [
   {
     name: "how's the weather there?",
-    image: "/images/projects/weather.jpg",
+    image: "/images/projects/weather.webp",
     description:
       "A minimal weather app that provides current weather information and forecasts for any location. Users can search for a city and view the current temperature, time and weather conditions",
     tech: ["JavaScript", "HTML", "CSS", "REST API"],
   },
   {
     name: "found it!",
-    image: "/images/projects/found-it.jpg",
+    image: "/images/projects/found-it.webp",
     description:
       "A hidden object game that challenges players to find objects hidden in a picture. The game ends when all items are found in the least amount of time to beat other players on the leaderboard",
     tech: ["React", "Node.js (Express)", "PosrtgreSQL", "REST API"],
   },
   {
     name: "interes(thing)",
-    image: "/images/projects/interest.jpg",
+    image: "/images/projects/interest.webp",
     description:
       "An app that allows users to create and share their interests with others via photos. Users can create a profile, add their interests, and connect with other users by liking and commenting on their posts",
     tech: ["Node.js (Express)", "PosrtgreSQL"],
