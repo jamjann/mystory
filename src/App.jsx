@@ -68,13 +68,13 @@ const StyledHighlight = styled(Highlight)`
   }
 `;
 
-const renderLoader = () => <p>Loading</p>;
-
 const App = () => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { enableScroll, disableScroll } = useScroll();
+
+  const renderLoader = () => <p>Loading</p>;
 
   const handleModal = (id) => {
     disableScroll();
@@ -93,27 +93,29 @@ const App = () => {
 
   return (
     <PageWrapper>
-      <Paper>
-        <Container>
-          <Area>
-            <PageHeader />
-            <PageContent>
-              <StyledHighlight>
-                <h2> - Girl who loves eating while coding -</h2>
-              </StyledHighlight>
+      <Suspense fallback={renderLoader()}>
+        <Paper>
+          <Container>
+            <Area>
+              <PageHeader />
 
-              <Suspense fallback={renderLoader()}>
+              <PageContent>
+                <StyledHighlight>
+                  <h2> - Girl who loves eating while coding -</h2>
+                </StyledHighlight>
+
                 <Intro />
-                {/* 
-              <Experience />
 
-              <Project onHandleModal={() => handleModal("portfolio")} /> */}
-              </Suspense>
-            </PageContent>
-            <PageFooter />
-          </Area>
-        </Container>
-      </Paper>
+                <Experience />
+
+                <Project onHandleModal={() => handleModal("portfolio")} />
+              </PageContent>
+
+              <PageFooter />
+            </Area>
+          </Container>
+        </Paper>
+      </Suspense>
 
       {isModalActive && (
         <Modal onClose={handleCloseModal} isLoading={isLoading}>

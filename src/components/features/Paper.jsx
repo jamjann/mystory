@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -76,13 +77,17 @@ const Sub3 = styled.div`
 `;
 
 const Paper = ({ children }) => {
+  const renderLoader = () => <p>Loading</p>;
+
   return (
     <Wrapper>
       <Container>
         <Main>{children}</Main>
-        {/* <Sub></Sub>
-        <Sub2></Sub2>
-        <Sub3></Sub3> */}
+        <Suspense fallback={renderLoader()}>
+          <Sub></Sub>
+          <Sub2></Sub2>
+          <Sub3></Sub3>
+        </Suspense>
       </Container>
     </Wrapper>
   );
