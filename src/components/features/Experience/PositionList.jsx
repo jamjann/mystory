@@ -78,7 +78,7 @@ const Item = styled.div`
     }
 
     &:hover {
-      background-color: var(--dark-blue);
+      background-color: var(--main-color);
       border-color: var(--main-color);
       color: white;
     }

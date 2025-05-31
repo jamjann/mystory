@@ -163,7 +163,7 @@ const TechStack = styled.div`
 `;
 
 const Detail = ({ id, isLoading }) => {
-  const { image, name, description, tech } = projectList[id];
+  const { image, alt, name, description, tech } = projectList[id];
 
   return (
     <Wrapper>
@@ -171,7 +171,10 @@ const Detail = ({ id, isLoading }) => {
         <ImageBlock>
           <ImageFilter />
           <StyledImage
+            id={id}
             url={image}
+            alt={alt}
+            size="contain"
             className={!isLoading ? "active" : "loading"}
           />
         </ImageBlock>

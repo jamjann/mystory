@@ -17,6 +17,7 @@ const experienceList = [
   {
     company: "Self Employed",
     image: "/images/experience/current.webp",
+    alt: "freelance experience",
     position: [
       {
         title: "Full-Stack Developer",
@@ -57,6 +58,7 @@ const experienceList = [
   {
     company: "Hobbiz",
     image: "/images/experience/hobbiz.webp",
+    alt: "hobbiz experience",
     position: [
       {
         title: "Software Engineer",
@@ -99,6 +101,7 @@ const experienceList = [
   {
     company: "SNEAK",
     image: "/images/experience/sneak.webp",
+    alt: "sneak experience",
     position: [
       {
         title: "Software Engineer",
@@ -139,6 +142,7 @@ const experienceList = [
   {
     company: "KOS Design",
     image: "/images/experience/kos.webp",
+    alt: "kos experience",
     position: [
       {
         title: "Software Engineer",
@@ -179,6 +183,7 @@ const experienceList = [
   {
     company: "SKUBA",
     image: "/images/experience/skuba.webp",
+    alt: "skuba experience",
     position: [
       {
         title: "Research Engineer",
@@ -213,6 +218,7 @@ const experienceList = [
   {
     company: "Kasetsart University",
     image: "/images/experience/kasetsart.webp",
+    alt: "kasetsart experience",
     position: [
       {
         title: "Teaching Assistant",
@@ -246,6 +252,7 @@ const experienceList = [
   {
     company: "GPSC",
     image: "/images/experience/gpsc.webp",
+    alt: "gpsc experience",
     position: [
       {
         title: "Software Engineer Intern",
@@ -314,6 +321,7 @@ const projectList = [
   {
     name: "how's the weather there?",
     image: "/images/projects/weather.webp",
+    alt: "weather project",
     description:
       "A minimal weather app that provides current weather information and forecasts for any location. Users can search for a city and view the current temperature, time and weather conditions",
     tech: ["JavaScript", "HTML", "CSS", "REST API"],
@@ -321,6 +329,7 @@ const projectList = [
   {
     name: "found it!",
     image: "/images/projects/found-it.webp",
+    alt: "found it project",
     description:
       "A hidden object game that challenges players to find objects hidden in a picture. The game ends when all items are found in the least amount of time to beat other players on the leaderboard",
     tech: ["React", "Node.js (Express)", "PosrtgreSQL", "REST API"],
@@ -328,6 +337,7 @@ const projectList = [
   {
     name: "interes(thing)",
     image: "/images/projects/interest.webp",
+    alt: "interes(thing) project",
     description:
       "An app that allows users to create and share their interests with others via photos. Users can create a profile, add their interests, and connect with other users by liking and commenting on their posts",
     tech: ["Node.js (Express)", "PosrtgreSQL"],

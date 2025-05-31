@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import "./App.css";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useCallback, useEffect } from "react";
 import PageHeader from "./components/layout/PageHeader";
 import PageFooter from "./components/layout/PageFooter";
-import Paper from "./components/features/Paper";
 import { Highlight } from "./components/utils/TextStyles";
 
 import Modal from "./components/utils/Modal";
@@ -13,6 +12,8 @@ import { useScroll } from "./services/scroll";
 
 const Experience = lazy(() => import("./components/features/Experience"));
 const Project = lazy(() => import("./components/features/Project"));
+const Paper = lazy(() => import("./components/features/Paper"));
+
 const PageWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -67,58 +68,89 @@ const StyledHighlight = styled(Highlight)`
     }
   }
 `;
-
 const App = () => {
+  const [isModalLoading, setIsModalLoading] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+
+  const [isPageLoading, setIsPageLoading] = useState(true);
   const { enableScroll, disableScroll } = useScroll();
 
-  const renderLoader = () => <p>Loading</p>;
+  const handleModal = useCallback(
+    (id) => {
+      disableScroll();
+      setIsModalLoading(true);
+      setIsModalActive(true);
+      setActiveModal(id);
 
-  const handleModal = (id) => {
-    disableScroll();
-    setIsLoading(true);
-    setIsModalActive(true);
-    setActiveModal(id);
+      // Debounce loading state
+      setTimeout(() => setIsModalLoading(false), 500);
+    },
+    [disableScroll]
+  );
 
-    setTimeout(() => setIsLoading(false), 500);
-  };
-
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     enableScroll();
     setIsModalActive(false);
     setActiveModal(null);
+  }, [enableScroll]);
+
+  const renderLoader = useCallback(() => <p>Loading...</p>, []);
+
+  const cacheImages = async (arr) => {
+    const promises = await arr.map((src) => {
+      return new Promise((res, rej) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = res();
+        img.onerror = rej();
+      });
+    });
+
+    await Promise.all(promises);
+
+    setIsPageLoading(false);
   };
+
+  useEffect(() => {
+    const images = [
+      "/images/paper.webp",
+      "/images/jamjann.webp",
+      "/images/experience/current.webp",
+      "/images/projects/weather.webp",
+    ];
+
+    cacheImages(images);
+  }, []);
 
   return (
     <PageWrapper>
-      <Suspense fallback={renderLoader()}>
-        <Paper>
-          <Container>
-            <Area>
-              <PageHeader />
+      {isPageLoading ? (
+        <div>loadingggg</div>
+      ) : (
+        <Suspense fallback={renderLoader()}>
+          <Paper>
+            <Container>
+              <Area>
+                <PageHeader />
+                <PageContent>
+                  <StyledHighlight>
+                    <h2> - Girl who loves eating while coding -</h2>
+                  </StyledHighlight>
 
-              <PageContent>
-                <StyledHighlight>
-                  <h2> - Girl who loves eating while coding -</h2>
-                </StyledHighlight>
-
-                <Intro />
-
-                <Experience />
-
-                <Project onHandleModal={() => handleModal("portfolio")} />
-              </PageContent>
-
-              <PageFooter />
-            </Area>
-          </Container>
-        </Paper>
-      </Suspense>
+                  <Intro />
+                  <Experience />
+                  <Project onHandleModal={() => handleModal("portfolio")} />
+                </PageContent>
+                <PageFooter />
+              </Area>
+            </Container>
+          </Paper>
+        </Suspense>
+      )}
 
       {isModalActive && (
-        <Modal onClose={handleCloseModal} isLoading={isLoading}>
+        <Modal onClose={handleCloseModal} isLoading={isModalLoading}>
           {activeModal === "portfolio" && <Portfolio />}
         </Modal>
       )}

@@ -93,7 +93,9 @@ const Experience = () => {
     <Wrapper>
       <ImageCol>
         <ImageArea
+          id={activeItem}
           url={experienceList[activeItem].image}
+          alt={experienceList[activeItem].alt}
           className={!isLoading ? "active" : "loading"}
         />
       </ImageCol>
