@@ -30,7 +30,7 @@ const Main = styled.div`
   position: relative;
   background-color: var(--beige);
   background-image: url("/images/paper.webp");
-  background-size: auto;
+  background-size: contain;
   border-radius: 2px;
   z-index: 3;
 `;
@@ -40,7 +40,7 @@ const Sub = styled.div`
   height: 96%;
   position: absolute;
   background-image: url("/images/paper.webp");
-  background-size: auto;
+  background-size: contain;
   background-color: var(--middle-dark-cream);
   transform: skewX(-2deg) rotate(-0deg);
   border-radius: 2px;
@@ -53,7 +53,7 @@ const Sub2 = styled.div`
   height: 100%;
   position: absolute;
   background-image: url("/images/paper.webp");
-  background-size: auto;
+  background-size: contain;
   background-color: var(--dark-cream);
   transform: rotate(-1deg);
   border-radius: 2px;
@@ -67,7 +67,7 @@ const Sub3 = styled.div`
   height: 100%;
   position: absolute;
   background-image: url("/images/paper.webp");
-  background-size: auto;
+  background-size: contain;
   background-color: var(--dark-beige);
   transform: skewX(-0.5deg);
   border-radius: 2px;
