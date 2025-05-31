@@ -126,7 +126,7 @@ const App = () => {
   return (
     <PageWrapper>
       {isPageLoading ? (
-        <div>loadingggg</div>
+        <p>loadingggg</p>
       ) : (
         <Suspense fallback={renderLoader()}>
           <Paper>
