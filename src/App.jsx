@@ -115,7 +115,7 @@ const App = () => {
   useEffect(() => {
     const images = [
       "/images/srcset/paper-680w.webp",
-      "/images/srcset/jamjann-960w.webp",
+      "/images/srcset/phatthawipha-960w.webp",
       "/images/srcset/experience/current-960w.webp",
       "/images/srcset/projects/weather-960w.webp",
     ];
