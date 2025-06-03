@@ -30,7 +30,7 @@ const ResponsiveImage = ({ src, alt, size }) => {
 
   return (
     <picture>
-      <source media="(max-width:360px)" srcSet={small} />
+      {/* <source media="(max-width:360px)" srcSet={small} /> */}
       <source media="(max-width:900px)" srcSet={medium} />
       <source media="(max-width:1500px)" srcSet={large} />
       <source media="(max-width:1980px)" srcSet={xLarge} />
