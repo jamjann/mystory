@@ -101,7 +101,17 @@ const Hover = styled.div`
     position: absolute;
     top: 0;
     background-color: rgb(247 242 228 / 90%);
-    background-image: url("/images/paper.webp");
+    background-image: url("/images/srcset/paper-680w.webp");
+    background-image: image-set(
+      url("/images/srcset/paper-680w.webp") 1x,
+      url("/images/srcset/paper-960w.webp") 2x,
+      url("/images/srcset/paper-1980w.webp") 3x
+    );
+    background-image: -webkit-image-set(
+      url("/images/srcset/paper-680w.webp") 1x,
+      url("/images/srcset/paper-960w.webp") 2x,
+      url("/images/srcset/paper-1980w.webp") 3x
+    );
     background-size: initial;
   }
 `;

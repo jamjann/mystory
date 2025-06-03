@@ -105,9 +105,9 @@ const Intro = () => {
 
       <PhotoCol>
         <MainPhoto
-          url="/images/jamjann.webp"
+          src="/images/srcset/phatthawipha"
           caption="Phatthawipha and her chilled days in Whistler, Canada"
-          alt="phatthawipha photo"
+          alt="Phatthawipha and her chilled days in Whistler, Canada"
         />
       </PhotoCol>
 

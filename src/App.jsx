@@ -114,10 +114,10 @@ const App = () => {
 
   useEffect(() => {
     const images = [
-      "/images/paper.webp",
-      "/images/jamjann.webp",
-      "/images/experience/current.webp",
-      "/images/projects/weather.webp",
+      "/images/srcset/paper-680w.webp",
+      "/images/srcset/jamjann-960w.webp",
+      "/images/srcset/experience/current-960w.webp",
+      "/images/srcset/projects/weather-960w.webp",
     ];
 
     cacheImages(images);

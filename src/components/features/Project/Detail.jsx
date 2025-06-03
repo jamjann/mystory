@@ -144,10 +144,9 @@ const TechStack = styled.div`
     & > div {
       flex-flow: row wrap;
       justify-content: center;
+      gap: 10px;
     }
     .list p {
-    }
-    p {
       gap: 5px;
     }
   }
@@ -172,7 +171,7 @@ const Detail = ({ id, isLoading }) => {
           <ImageFilter />
           <StyledImage
             id={id}
-            url={image}
+            src={image}
             alt={alt}
             size="contain"
             className={!isLoading ? "active" : "loading"}
