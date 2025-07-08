@@ -21,7 +21,7 @@ const experienceList = [
     position: [
       {
         title: "Full-Stack Developer",
-        duration: "JUN 2015 - Present",
+        duration: "JUN 2019 - Present",
         skill: [
           "CSS/ SCSS",
           "PHP",
@@ -43,7 +43,7 @@ const experienceList = [
             text: "Enhance the performance of the website by creating a web content application focusing on SEO, leading to an increase of over 1200% in organic traffic on the website after a few months of launching",
           },
           {
-            text: "Solve the pain points of the existing system that customers are facing while providing practical solutions to ensure the highest efficiency of products for end users, resulting in more than 4000 non-tech savvy users accessing and using the service more conveniently",
+            text: "Design and implement practical solutions to solve pain points of an existing system that customers are facing to ensure the highest efficiency of products for end users, resulting in more than 4000 non-tech savvy users accessing and using the service more conveniently",
           },
           {
             text: "Experience working with various programming languages, frameworks, CMS, and technologies using design methods and technologies relevant to customers' requirements and project details",
@@ -172,6 +172,9 @@ const experienceList = [
           },
           {
             text: "Develop quality responsive web applications from scratch for medium and large companies worldwide, i.e. Bitdefender, Canterbury, Conergy, Naraya, Takenaka, etc., with a satisfaction rate of over 98% from customers and end users who also recommend the company to others",
+          },
+          {
+            text: "Participate in code reviews and provide constructive feedback to improve code quality and maintainability to ensure the codebase is clean, efficient, and follows best practices",
           },
           {
             text: "Gather requirements, design the system architecture, and implement the solution to ensure the final product meets the client's needs and expectations",

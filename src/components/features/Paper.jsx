@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 85%;
-  max-width: 2000px;
+  max-width: 2100px;
   /* height: 100%;
   min-height: 85%; */
   position: relative;
